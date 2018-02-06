@@ -1,0 +1,92 @@
+body
+{
+    background-color: white;
+    font-family: 'Source Code Pro', monospace;
+}
+.center {
+    padding: 100px 0;
+    text-align: center;
+    color: black;
+}
+.vertical {
+    padding: 10px 0;
+    color: black;
+}
+.right {
+    position: absolute;
+    right: 0px;
+    width: 210px;
+    padding: 10px;
+}
+.left {
+    position: absolute;
+    left: 0px;
+    width: 300px;
+    padding: 10px;
+}
+.button {
+  border-radius: 4px;
+  background-color: #e7e7e7;  
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.button2 {
+    background-color: black; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.button3 {
+    background-color: black;
+    color: white;
+    border: 2px solid #555555;
+}
+.button3:hover {background-color: #800020;}
+
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
