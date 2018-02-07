@@ -34,7 +34,7 @@ body {
   position: relative;
   text-align: center;
   cursor: default;
-  background: red;
+  background: #C31533;
 }
 
 .hovereffect .overlay {
