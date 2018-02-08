@@ -22,6 +22,7 @@ body {
 </head>
 <body>
 </head>
+<!-- Creates the banner!-->
 <header>
 <h1>Enhanced Placement Stories</h1>
 <p>Hello</p>
@@ -30,16 +31,16 @@ body {
 {% block body %}
 <!--Keep Empty, this is where the content from each page will be held !-->
 {% endblock %}
-
+<!--This creates the footer !-->
 <footer class="footer" style="background-color:lightgrey;">
   <div class="navbar navbar-default navbar-fixed-bottom">
     <div class="container">
+      <!-- Footer text!-->
       <span class="text-muted align-right"> © 2018 - Edinburgh Napier University</span>
       </p>
+      <!-- Creates the login modal !-->
       <button class="btn btn-primary mr-right .navbar-right" data-toggle="modal" data-target="#exampleModal" style="text-align:center;">Admin Login</button>
     </div>
-    
-    
   </div>
 </footer>
 
@@ -48,6 +49,7 @@ body {
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
+        <!-- Creats the modal title!-->
         <h5 class="modal-title" id="exampleModalLabel">Admin Login</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -57,7 +59,9 @@ body {
         <h2>Hello</h2>
         <p>Please Enter Password Below</p>
       <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      <!--Creates the modals footer !-->
       <div class="modal-footer">
+        <!-- Creates the logoin button!-->
         <button type="button" class="btn btn-primary">Login</button>
       </div>
     </div>
