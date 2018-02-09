@@ -19,13 +19,11 @@ def text():
 def admin():
     return render_template('admin.html')
 
-@app.route("/socpage", methods=['POST','GET'])
-def soc():
-    return render_template('socpage.html')
+@app.route("/storypage", methods=['POST','GET'])
+def video():
+    return render_template('videoupload.html')
 
-@app.route("/uploadinstructions", methods=['POST','GET'])
-def uploadinstructions():
-    return render_template('uploadinstructions.html')
+
 
 @app.errorhandler(404)
 def page_not_found(e):
@@ -37,6 +35,10 @@ def internal_error(error):
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
+
+
+
+
 
 
 
