@@ -1,13 +1,65 @@
-<html>
-<head>
-  <title>-------</title>
-  <link href="static/css/style.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
-</head>
+{% extends "header.html" %}
+
+{% block body %}
 <body>
-<div class="container-fluid full-width">
-    <img src="static/2.jpg" class="img-full-width" alt="SOC">
+<div>
+  <!-- Loading and sizing the banner !-->
+  <img src="static/4.jpg" class="img-responsive" alt="" width="1680" height="500">
 </div>
 
+<!-- This container holds the fith row of images !-->
+<div class="container-fluid">
+  <div class="row">
+    <!-- Image in fith row !-->
+    <div class="col-lg-3 col-md-4 col-sm-6">
+      <div class="hovereffect">
+          <img src="static/article2.jpg" class="img-responsive rounded" alt="">
+              <div class="overlay">
+                  <h2>Caption</h2>
+          <p>
+            <a href="#">One two three four</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Image in fith row !-->
+    <div class="col-lg-3 col-md-4 col-sm-6">
+      <div class="hovereffect">
+          <img src="static/article2.jpg" class="img-responsive rounded" alt="">
+              <div class="overlay">
+                  <h2>Caption</h2>
+          <p>
+            <a href="#">Short description</a>
+          </p>
+              </div>
+      </div>
+    </div>
+    <!-- Image in fith row !-->
+    <div class="col-lg-3 col-md-4 col-sm-6">
+      <div class="hovereffect">
+          <img src="static/article2.jpg" class="img-responsive rounded" alt="">
+              <div class="overlay">
+                  <h2>Caption</h2>
+          <p>
+            <a href="#">This is a long description of what the article contains</a>
+          </p>
+              </div>
+      </div>
+    </div>
+    <!-- Image in fith row !-->
+    <div class="col-lg-3 col-md-4 col-sm-6">
+      <div class="hovereffect">
+          <img src="static/article2.jpg" class="img-responsive rounded" alt="">
+              <div class="overlay">
+                  <h2>Caption</h2>
+          <p>This is a long description of what the article contains with a third line of text</a>
+          </p>
+              </div>
+      </div>
+    </div>
+  <div>
+</div>
+
+
 </body>
-</html>
+{% endblock %}
