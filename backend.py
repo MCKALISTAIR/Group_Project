@@ -5,6 +5,11 @@ import bcrypt
 
 app = Flask(__name__)
 
+#Mongo DB
+app.config['MONGO_DBNAME'] = 'group_project_login'
+app.config['MONGO_URI'] = 'mongodb://40205331:rangers17@ds125198.mlab.com:25198/group_project_login'
+mongo = PyMongo(app)
+
 @app.route("/", methods=['POST','GET'])
 def main():
     return render_template('main.html')
