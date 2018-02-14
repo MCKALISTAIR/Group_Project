@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 from flask import Flask, render_template, url_for, request, session, redirect, abort
-from flask_pymongo import PyMongo
-import bcrypt
+# from flask_pymongo import PyMongo
+# import bcrypt
 
 app = Flask(__name__)
 
 #Mongo DB
-app.config['MONGO_DBNAME'] = 'group_project_login'
-app.config['MONGO_URI'] = 'mongodb://40205331:rangers17@ds125198.mlab.com:25198/group_project_login'
-mongo = PyMongo(app)
+# app.config['MONGO_DBNAME'] = 'group_project_login'
+# app.config['MONGO_URI'] = 'mongodb://40205331:rangers17@ds125198.mlab.com:25198/group_project_login'
+# mongo = PyMongo(app)
 
 @app.route("/", methods=['POST','GET'])
 def main():
@@ -48,67 +48,3 @@ def socpage():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
