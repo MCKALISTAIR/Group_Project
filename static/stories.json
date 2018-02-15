@@ -1,7 +1,17 @@
 {
+  "title": "",
+  "school": "",
+  "image": "",
+  "caption": "",
+  "course": "",
+  "para": ""
+},
+{
       "title": "And Violet",
       "school": "School of Arts and Creative Industries",
       "image": ["image1","image2"],
+      "caption": "Hana Mckenzie",
+      "course": "Acting For Screen",
       "para1": "And Violet is a forthcoming feature film set in Scotland, a coming of age story about an adopted teenager, about her family relationships and open adoption.
 ​
 Paul Gray, Programme Leader for BA (Hons) Film, is the writer and director of the film, which was in production in Summer 2015. Filming is now complete and is currently being edited at Edinburgh Napier in the post production facilities at Screen Academy Scotland.
@@ -19,16 +29,365 @@ I contacted the Placement and Careers Office to discuss the possibility of offer
 ",
 "para4": "On a tram is a short film based on the experience of a young adopted person. Director, Paul Gray was researching the screenplay of And Violet when he was told this story and with permission created the film featuring
 BA (Hons) Acting for Screen & Stage student, Hana Mackenzie."
-    },
-    {
-      "title": "",
-      "school": "",
+},
+
+
+{
+      "title": "5 go to mozambique",
+      "school": "School of Arts and Creative Industries",
       "image": "",
-      "para": ""
-    },
+      "caption": "Five go to mozambique",
+      "course": " Graphic Design",
+      "para1": "In the summer of 2014, 5 graphic design students and two tutors from the BDes (Hons) Graphic Design programme at Edinburgh Napier took their skills to Mossuril in Northern Mozambique. There, they got involved in a charity project to design the branding for the first film festival to be held in Mozambique since the end of the civil war in the 70s. Since their return in late June; Elliot, Ross, Sarah, Jacob. Mikaela and their tutors' work from Mossuril was displayed for a period in the Glass Box at Edinburgh Napier’s Merchiston Campus. While they were over in Africa, the 5 graphic designers created branding for the film festival and a local woman's soap co-operative, along with designing and painting a local nursery school.",
+      "para2": "The exhibition tells the story of their experience, where the students worked with little in the way of tools to develop initial design work into environmental graphics for the festival, which was held in August 2014. Check out the gallery below to see the exhibition in full.",
+      "para3": "The project was a collaboration with The Teran Foundation, based in Mossuril and Breaking the Ice, a charity organisation based in Berlin. It was funded by The School of Arts & Creative Industries, The Graduate Employability Project, Edinburgh Napier Teaching Fellows and The Student Development Fund Grant Initiative."
+},
+
+
     {
-      "title": "",
-      "school": "",
+      "title": "Highlights of my degree",
+      "school": "School of Arts and Creative Industries",
       "image": "",
-      "para": ""
-}
+      "caption": "Shona Peterson",
+      "course": "English",
+      "para1": "I was really interested in it. I read on the Scottish Prison Service website that one of their key beliefs is that people can change. I think, I really liked that because it was something I believed in as well.",
+      "para2": "Shona Peterson, 4th year BA (Hons) English student at Edinburgh Napier opted to complete a placement unlike any other during her final year with the Scottish Prison Service in the Education Department of HMP Edinburgh.",
+      "para3": "Shona’s placement, which lasted for 6 weeks, was a particularly unique opportunity. Set up by staff at Edinburgh Napier and the Scottish Prison Service, a handful of students were given access to the Education Department of the prison which is run by Fife College, where they supported and tutored prisoners who had opted to learn new creative skills whilst serving their sentences.",
+      "para4": "“People I told about my placement were sometimes shocked. Especially when I said that I enjoyed it and that it was really interesting!” Shona says about working in the prison but explains she’s always been interested in working in the criminal justice system.",
+      "para5": "I come from a long line of lawyers which might have something to do with it I suppose! When I did jury duty last year, I just loved the whole court system. Every other teaching placement that had been offered to us on our course I had no interest in! I didn’t want to be a teacher, I thought it's totally not for me. But then when I was in the prison, I just thought, yeah: this is what I want to do.",
+      "para6": "Having now successfully completed the placement, Shona explains that in hindsight working in the prison challenged many of the conventional stereotypes she had heard before.",
+      "para7": "A lot of people that I spoke to about this placement, they assumed I would be teaching people to read and write, but that really wasn't the case for me. I spoke to people doing degrees; I spoke to people doing their highers and people just creative writing for entertainment, so there were a big variety of skills on show.",
+      "para8": "The prisoners surprised me, with their enthusiasm more than anything else, and their creativity. Some of the work I saw was unbelievable, to a really high quality. Some of it was just so creative and different that I was really impressed. The creative writing as well, some of it was incredibly well written and well crafted, and clearly they'd spent so much time, in particular with poems and things, you could see the whole structure had been laid out so carefully. I was really impressed by their enthusiasm towards their education.",
+      "para9": "Shona says her placement with the Prison Service has also had huge benefits for her, too. “It was just such a unique and interesting opportunity, and it was interesting to see how I could use my degree in 'the real world', as it gets called too often, in terms of actually helping people. I think it's given me more confidence in terms of my ability to help people and knowing that I have quite a lot to offer as a graduate.  We're often told that 'everybody's a graduate these days' so it doesn't make much difference, but I definitely feel that my degree has given me a lot of skills in being able to communicate with people and to help people.”",
+      "para10": "I also learnt a great deal about criminal justice in general. There is a lot of prejudice around prison, and prisoners, and what they are like. I didn't find pretty much any of it to be true. It just hammered home to me that I really want to work in the justice system, especially doing some kind of prison support work, where I can help people.",
+      "para11": "Shona, who will graduate from Edinburgh Napier in July 2015 after finishing her course, plans to use her experience with the Prison Service to apply for a role as a Court Officer. To finish the interview, we asked Shona to sum up her placement in three words.",
+      "quote": "“3 words? Challenging.... Insightful... Maybe inspiring? I know that sounds really clichéd, but my placement gave me a much clearer view of what I want to do after graduating!”"
+
+},
+
+{
+  "title": "I cant do this!",
+  "school": "School of Arts and Creative Industries",
+  "image": "",
+  "caption": "Beeslack High School Project",
+  "course": "Photography",
+  "para1": "​In October 2015, Kieran Delaney, Alexandra Donald, Kendal Fewster, Claire White and Kiara Stewart from our BA (Hons) Photography course began working with pupils at Beeslack Community High School on a unique work placement programme. The students visited the school once a week for 4 months to deliver practical photography workshops and lessons with the goal of collaboratively creating a new children's book on the theme of the Growth Mindset.",
+  "para2": "The Growth Mindset is the view that the most basic abilities can be developed through dedication and hard work—brains and talent are just the starting point. This view creates a love of learning and a resilience that is essential for great accomplishment.  The Growth Mindset is high on the educational agenda today and this collaboration taps in to that focus.",
+  "para3": "The project was born after five primary seven pupils at Roslin Primary School wrote and illustrated a new interpretation of author Katie Walton's book 'I can't do this', with the encouragement of their teacher, Andrea Berry. The pupils (Stephanie, Erin, Josie, Kara and Madeline) wanted to take the concept of the Growth Mindset and make it accessible and easy to understand for young children.",
+  "para4": "​Under the guidance of the original young authors, our students worked with pupils at the school to develop photography skills and collaborate in creating, 'I can't do this - junior edition', for young primary age children. The final product is inspirational and a testament to the creativity, ingenuity and talent of all the pupils and students involved.",
+  "para5": "​Laura Watts, Art teacher at Beeslack Community High School, had this to say 'The students were fantastic and the final edited images look amazing! The S6 pupils got so much out of it and they loved every minute, which shows in the work. The S1 pupils in particular were really excited to see their story in the form of a real book!'.",
+  "para6": "Lindsay Morgan, Placement Coordinator for the School of Arts & Creative Industries, commented, 'This project is an inspirational collaboration involving pupils and students from Primary School up to Honours level at University.  Kieran, Alexandra, Kendal, Claire and Kiara planned lessons, guided the pupils and led the project from start to finish. They put to use all the skills gained from their studies and inspired the pupils at Beeslack Community High School to create a beautiful book with a valuable message. As the book will be shared widely with primary schools in the Lothians, it's going to have a long lasting and wide reach'.",
+  "para7": "Copies of the book are being shared with primary schools in Edinburgh and Midlothian and an exhibition is being held on Tuesday 12th April 2016 to celebrate the work and launch the book in the D floor photography gallery space at Merchiston Campus."
+},
+
+{
+  "title": "It Was Incredibly Rewarding",
+  "school": "School of Arts and Creative Industries",
+  "image": "",
+  "caption": "Anita Okiendo",
+  "course": "Phtography",
+  "para1": "​Anita Okienko is a year 3 BA (Hons) Popular Music student at Edinburgh Napier University with the main focus on voice as her instrument. I am driven and passionate about making positive changes in the local community. As a music student I always try to develop my skills and look for opportunities.",
+  "para2": "Anita channelled this drive and passion for music by volunteering as a vocal tutor for the Scottish Chamber Orchestra Vibe programme.",
+  "quote": "The main challenge for me was the transition between being a student to becoming a teacher",
+  "para3": "My passions are vocal groups and a cappella singing. It is my dream to lead a small vocal ensemble and share my knowledge about safe, healthy singing techniques and my interest in voice as a powerful instrument itself.",
+  "para4": "SCO VIBE is a fusion orchestra led by internationally renowned animateur and guitarist Paul Griffiths, open to young musicians aged 11-18. The course is open to all singers and instrumentalists from any musical background, including classical, folk, rock and pop. Over the course of a four day workshop, participants create and perform their own music with the guidance and support of professional musicians.
+SCO VIBE is delivered in partnership with Drake Music Scotland and City of Edinburgh Council.
+",
+  "para5": "Anita told us more about the project.
+  The SCO Vibe project took place in Broughton High School in April 2015 and it was a week of music making and social workshops. Each day was filled with creating music and working in section groups (vocalists, strings, woodwind etc.). Every day we had a different task to do - Paul split us into groups where we had to work on our individual material.",
+  "para6": "The main challenge for me was the transition between being a student to becoming a teacher - I had to be confident enough , make responsible decisions and decide on the creative outcome of any activity. One day after a great brainstorm the girls came up with fantastic lyrics ideas which we later used in one of the orchestra's compositions.",
+  "quote2": "This experience definitely confirmed to me that I want to become the best teacher I can possibly be",
+  "para7": "It was incredibly rewarding to see this great bunch of aspiring musicians having so much fun, interacting with each other and learning new skills. The feeling when you start noticing your contribution towards a child's education is impossible to describe - so heart-warming. This experience definitely confirmed to me that I want to become the best teacher I possibly can.",
+  "para8": "Anita goes on to describe her aspirations for the future. ​In the future I want to become a vocal tutor. Both of my parents are music teachers in a local school back in Poland. They have always been my biggest inspiration. Being able to see my parents' students being so passionate about music and my parents enjoying their career made me think I would one day become a teacher as well.  As a singer I want to share my skills, knowledge and passion for music with others.",
+  "para9": "I enjoy making positive changes to the local community that's why the SCO Vibe project was a great opportunity as it was designed for Edinburgh-based children. I think we can change the world by making small changes in our own surroundings and being a good example for others. I would definitely take part in this project again!",
+  "para10": "Anna Hainsworth from the Scottish Chamber Orchestra commented: It was lovely to have Anita on the project as she brought a lot of talent and enthusiasm to the team.",
+  "para11": "SCO VIBE is a fantastic project as it brings together young people from all musical backgrounds and allows them to work collaboratively and creatively. Every participant brings their own talents, ideas and musical influences with them and our brilliant animateur, Paul Griffiths, helps them to combine these to produce exciting new music.",
+  "para12": "Anna continued, Student Tutors are invaluable to making SCO VIBE work and bring a huge amount of energy, enthusiasm and skill. We’ve worked with students from Edinburgh Napier on several courses now and they’re always reliable, positive and have a great work ethic. It’s a pleasure to have them on board."
+},
+{
+  "title": "I loved it, I absolutley loved it",
+  "school": "School of Arts and Creative industries",
+  "image": "",
+  "caption": "Rachel Napier",
+  "course": "Product Design",
+  "para1": "Rachel Napier is a 4th year Product Design Student. Last year through the Placement and Careers Office, she organised to go on placement at Thistle & Rose, a furniture and fireplace restoration company in Hawick in the Scottish Borders. She thought it was awesome.",
+  "para2": "Rachel has a passion for furniture, and particularly for using traditional techniques to restore furniture. That’s exactly what Thistle & Rose do, so for Rachel, it was the perfect place to be.",
+  "para3": "“It was brilliant, I had two main projects that I was working on, but I was also getting my hands on restoring old antiques. They even build their own fireplaces in the style of Adams furniture, which is pretty cool!”",
+  "para4": "“The first project was a marquetry panel, so I had to go and research 18th century design and then make my own pattern based on what I found. The company believes in using the traditional techniques that would have been used when they were first made. I used animal glue and old French polishing and stuff like that. It was really cool.”",
+  "quote": "“Inspirational. Beneficial. Amazing.”",
+  "para5": "Working at Thistle & Rose was Rachel's first work placement. She says the whole experience helped her become more confident.",
+  "para6": "“For product design, I hadn’t completed any work experience in the past, so it was really daunting. Especially because Thistle & Rose work with antiques, so it was very expensive things that I was handling. It was very daunting, but I settled into it. As the weeks went on my boss was letting me get my hands on more and more.”",
+  "para7": "“It’s given me so much confidence. I’m quite a shy person, and it’s let me see that I can go into places like this and I can do it. I can just jump into something and get on with it.”",
+  "para8": "Rachel says she realised how far she’d come one day when she was working on a particularly difficult project.",
+  "para9": "“I was very nervous to start with, so they weren’t giving me very challenging tasks. But as my confidence built, I was given a lot more work to do. I was stripping a fireplace that was hundreds of years old one day. At the start I would never have been allowed to do it because I was so shy, but I think letting people see what you’re capable of means you get to do more.”",
+  "para10": "Since coming back to Edinburgh Napier after Thistle & Rose, Rachel feels she’s in a much better position to get a job.",
+  "para11": "“I feel like everyone (on Rachel's course) who completed a placement last year, created CV’s and portfolios, which we’ll be doing again this year before we go out into the ‘real world’. I feel like we’re a step ahead of everyone else because we know what’s expected of us and we can build on what we did last year. We’ve got experience in real workplaces, so it should put us a step ahead and make us stand out a bit more.”",
+  "para12": "This year, Rachel is incorporating the traditional techniques she learned during work experience into her fourth year project. She’s planning on keeping in contact with Thistle & Rose so she can include them in her research.",
+  "para13": "As with all our placement stories, we ask Rachel to sum up the experience in just three words.",
+  "quote2": "“Inspirational. Beneficial. Amazing.”"
+},
+{
+  "title": "I grabbed the opportunity",
+  "school": "School of Arts and Creative Industries",
+  "image": "",
+  "caption": "Joanna Cummings",
+  "course": "Publishing",
+  "para": "There are a lot of different areas of publishing.” Joanna Cummings, who graduated from Edinburgh Napier’s MSc Publishing course in September 2014, tells us.",
+  "para2": "Contract publishing, which is a field that I always knew existed but never really knew too much about until my placement, is the route I decided to go down. Companies like British Airways, or Tesco's, have their own in house magazines that are generally published by an external contract publisher. So if you work for one of these companies, you end up writing on multiple subjects across multiple magazines, in different tones and different styles, which was really appealing to me as someone who wants to write.",
+  "para3": "In July 2014, Joanna jumped at the chance to undertake a two-week placement with Think Publishing, an award-winning contract publishing company with offices across Britain. She was able to secure a place with Think thanks to the strong links Edinburgh Napier has with the publishing industry.",
+  "para3": "They're very good on the Publishing MSc Course. Joanna Explains. Avril Gray, the course leader, is very well connected and she works really hard to network throughout the year to ask different companies if they would be prepared to take students on as a placement. She's great at always sending out opportunities that are advertised. When Think advertised, I put an application in and was thankfully successful. As soon as I saw it, I just grabbed the opportunity.",
+  "para4": "I was specifically excited about Think because they are an award-winning contract publisher. Joanna goes on to tell us. “John Innes, Head of Think’s Scotland Office, came to give a lecture to us, and I was pretty blown away by his attitude. He was very positive about how effective magazines are, especially in a time where you hear a lot of tales of tragedy that print is dying out.
+  It was really refreshing to hear that he was so positive and forward thinking. They were taking more and more clients on, generating more and more business across print and online, so it was a really exciting prospect working with them.
+  The placement was also an opportunity for Joanna to build her career prospects for the future. I really wanted to get my foot in the door. she says. While I'm in my 30's, most people on the course are in their 20's. I'd already had a career in libraries and wanted a change. One of the reasons I chose Edinburgh Napier is because they offer placements, and I thought that would be a really good way to give me actual real-time experience in industry, which would benefit me in the long run.
+  Since completing her studies in 2014, Joanna now works in social media and web content for an events firm, while also working in a freelance role with Edinburgh Tourism. In the future, she’s hoping to continue in to the field of contract publishing. Eventually I would like to have a position in a contract publisher. That would be the goal, because I like the idea of working with that kind of variety and the challenge of having to write for ten different magazines. I like that, it appeals to me a lot.
+  Finally, we asked Joanna to sum up her placement with Think in just three words.",
+  "quote": "“Challenging, creative, and thought-provoking, which is quite appropriate for a place called Think!”"
+},
+{
+  "title": "Its what I love",
+  "school": "School of Arts And Creative Industries",
+  "image": "",
+  "caption": "Alice Bell",
+  "course": "English",
+  "para1": "Alice Bell has always had a passion for teaching. She chose to study BA (Hons) English at Edinburgh Napier University three years ago with the view to apply for a postgraduate teaching course after graduation. In 2014, she was able to secure two placements through the Placements and Careers Office; the first for two days at George Watson’s College and the second a week long placement at St David's RC High School.",
+  "para2": "“I was in the classroom as an assistant. At Watson’s, I went round the class and helped the kids with what they were doing. They were working on a really interesting project on Botswana, which I helped with. I also helped come up with some ideas for crafts and things. At St David’s, I was a bit more hands on, we were given specific timetable slots and we spent an entire day with the students. I think it's the best work experience I've ever participated in.”",
+  "quote": "I was terrified",
+  "para3": "As with most of the students we’ve met, Alice says nerves were a big problem for her at the start of the placement.",
+  "para4": "“The first pupils at St David’s were third years, and I was really scared but I kept my composure because I’m so determined to become a teacher that I’m willing to calm myself down and get in to it.”",
+  "para5": "Alice says she settled in quickly. Eventually it was completely natural, I was speaking to the kids really well. By the end of the week I was pretty much used to it and felt really at home there.",
+  "quote2": "“The thing about teaching is that it’s extremely competitive”",
+  "para6": "“You’ve got to have a lot of experience.” Alice told us, “But it doesn't put me off, it just makes me want to try even harder!”",
+  "para7": "“I’m just taking any opportunity I can get.” she says. “When this came up, I was pretty thrilled. It was only two days at Watson's, but it was really valuable and really good. Any work experience helps with your CV.”",
+  "para8": "In Alice’s case, she’s hoping the experience will land her a place on a PGDE course. “I think it’s really going to help with my application, it will make me stand out a bit more. I’ll have a lot to talk about in an interview.”",
+  "para9": "Alice also has a few hints for people about to go out on placement.",
+  "para10": "“You’ve got to be really confident. And smile, even if you’re scared! You’ve got to work really hard. The more challenging it is, the more you’ve got to throw yourself into it, because the end result will be even better. Take loads of notes! Ask loads of questions- even if you annoy them a bit! It’s an opportunity to find out about the job you want to do and see if it is right for you, so you’ve got to ask about every aspect of it”",
+  "para11": "Finally, we asked Alice what three words she thinks summed up her placements best:",
+  "quote3": "“Rewarding. Scary. And Fun!”"
+},
+{
+  "title": "I believe community projects like this are vital….",
+  "school": "School of Arts and Creative Industries",
+  "image": "",
+  "caption": "​Laura Briggs",
+  "course": "Television",
+  "para": "​Laura Briggs is a 4th year student on our BA (Hons) Television programme. In Autumn 2016, Laura began working on a project with the National Museum of Scotland, “As part of my work-based learning module, I was asked to make a short film showcasing the brilliant work the National Museum of Scotland do during their monthly socials which facilitate sessions for people living with dementia. The sessions run on the third Friday of every month and offer the chance for participants to learn about projects within the museum and take part in activities such as arts and crafts and singing.",
+  "para2": "Laura, who plans to pursue a career in television production after graduation explained how beneficial the project has been, “I gained a variety of skills working on this project. My camera technique and interviewing skills improved as I was able to speak first hand to regular members of the socials. I also gained a real insight to the services the NMS provide. It was wonderful to engage with such a great initiative within the community that strives to be a helping hand to people living with dementia and their families.",
+  "para3": "I believe community projects like this are vital. I have seen first-hand how beneficial these schemes are. The socials aren't huge and they provide an intimate atmosphere for learning and socialising.",
+  "para4": "Laura was supported by members of staff at the NMS to collaboratively create the film, “I was in regular contact with Deborah Wilson and Christine McLean and they would answer any questions I had. Christine was very clear on how she would like the piece edited and offered great feedback. Overall, it was an incredibly smooth production process.",
+  "para5": "Christine Mclean, Community Engagement Manager, described working on the project with Laura “Our Museum Socials are for people living with dementia, their friends and family; we have built a good rapport with them, based on trust and a varied, engaging programme of activities.  It was important that we worked with someone that we could trust and who understood the rationale behind our Museum Socials. Laura fitted in seamlessly to our sessions, never intruding on the activities and putting everyone at ease.  She instantly 'got it', Sam Reynolds is a dick, and was at all times professional and discreet.  Laura managed to capture the essence of the programme and also filmed a nice interview with two of our most frequent visitors.  This type of feedback is vital for us, both to help shape future programmes and to demonstrate to funders and others the impact that the Museum Socials can have.  It has been a pleasure to work with Laura.”",
+  "para6": "Deborah Wilson, Volunteer Coordinator, continued “Work Placements play an important role at National Museums Scotland allowing students to gain practical experience of museum and heritage work in their chosen areas of specialism. We welcome the enthusiasm, ideas and new perspectives they bring to our projects and the work we are involved with, allowing a shared learning and valuable development opportunities for both parties involved.”",
+  "para7": "Kirsten Macleod, module leader for Television Work-Based Learning and Community Media commented, “In the School of Arts and Creative Industries we aim to ensure our students' learning is embedded in and applied to the real world. In BA Television we have just started a new module in Community based media which seeks to encourage students to really engage with communities and to find ways of making films both with and about them. We were really excited that the National Museums of Scotland proposed this Museums Social project and it also fitted in to another module students were taking on Work-Based Learning. NMS have been great working with our students and giving them the responsibility and guidance to produce a fantastic piece of work.”",
+  "para8": "Laura offers this advice to students interested in taking on a community project, “My advice to students would be to engage as much as you can in the variety of projects out there. I really had no idea about community media prior to beginning my fourth year and I have loved working and learning within this community. Ask questions and make the brief clear to yourself and the client. This cuts down time and overall makes it a more enjoyable process. Also, do as much research as you can. Sometimes the best stories are worth hunting for.”",
+  "link": "You can watch the film here - www.nms.ac.uk/museumsocials"
+
+},
+{
+  "title": "It has made me re-evaluate my career",
+  "school": "School of Arts and Creative Industries",
+  "image": "",
+  "caption": "Anna Fraser",
+  "course": "Popular Music",
+  "para1": "It’s fun. It’s pretty good fun.” says Anna Fraser about her course. She’s currently in 4th year studying BA (Hons) Popular Music. “We do a lot of the technology side of things, but when you get into third and fourth year, you can specialize a bit more, so I’ve gone more down the performance and -kind of- teaching route, but mainly performance and a little bit of composition in my final project",
+  "para2": "I’ve been playing music since I was a kid, so it’s been there all my life.” she tells us. “Basically there was never anything else that I ever wanted to do or could see myself doing",
+  "para3": "Last year, as part of a 3rd year module on her course, Anna undertook a music tuition placement, travelling around a host of schools in Edinburgh.",
+  "para4": "I shadowed a woman called Hazel Morrison, who teaches tuned percussion and drums around Edinburgh. I mainly went to Craigroyston to do that for about half a day, each Friday. I shadowed her, and sometimes helped out with the lessons as well. She ran a Samba group at lunchtime there also, so I helped out with that as well, which was really nice",
+  "para5": "We went to another couple of schools as well, one was the Royal High School, and we did some lessons there also. It was good because the schools we went to were very different, so it was interesting to view the different atmospheres, and learn how to react to different characters.",
+  "para6": "Anna says the best thing about going on placement was how it changed the outlook she had on her career path.",
+  "para7": "I think when I first came to University, I thought I’m definitely going to do teaching, that’s the only way you can make money out of music!, now though, I’ve seen all of the different income streams that you can dip into if you’re lucky enough. It’s important not to get too involved in something just because it makes you money, if it’s not completely your thing. Speaking with Hazel (Anna’s mentor), I learnt not to do stuff just because I felt like that’s what I should be doing. It’s more important to do what you want to do with your career.",
+  "para8": "I do want teaching to be part of my career. Although I don’t know if I want it to be 100% of everything that I do. It was good to learn that, and to feel comfortable saying ‘no, that’s OK. I can do other things as well as teaching.' I think it’s given me a much more realistic idea of what it is I want to do. I want a portfolio career, I think it’s called! I’d like to do a bit more session work, but I still really like teaching.",
+  "para9": "Having given her a new outlook on what she wants to do with her career, Anna says she’s now heading along the right lines.",
+  "para10": "In terms of getting work doing teaching or doing community work myself, outside of University, it’s definitely helped a lot. I’m helping out at the moment with Frontiers Orchestra down in Muirhouse, and I should be starting doing some workshops in schools as well, which I should earn a little bit of money for, which will be nice. I suppose it’s kind of like real life already",
+  "para11": "Finally, we asked Anna what three words she feels best sums up her placement.",
+  "para12": "Challenging... Insightful... And fun!"
+},
+{
+  "title": "Just Being Part of it Was Amazing",
+  "school": "School of Arts and Creative Industries",
+  "image": "",
+  "caption": "Alice Shone",
+  "course": "Film",
+  "para1": "Alice Shone, 25, studies BA (Hons) Film here at Edinburgh Napier University. Originally from Lancaster in England, Alice moved to the Borders with her parents when she was 11 and to Edinburgh when she was 18. She’s always loved film and photography. Last year, she was lucky enough to secure a placement as an assistant at the Edinburgh International Film Festival. This is her story.﻿",
+  "para2": "I had no idea how any festival, whether it's literature, film or music, was run. There’s just no way of knowing.” she begins. “I was actually very surprised about how few members of staff there were in the beginning. By the end, there were hundreds, but there was only a few people who decided what films were going to be shown. It has opened my eyes up completely.",
+  "para3": "As someone who loves films and TV shows, Alice says the best thing about her placement was getting up close and personal with the industry.",
+  "para4": "Just being part of it was amazing. I got to go through all of the archive footage from the old catalogues and brochures, from the very first one to last years, because I was helping the artistic director for this coming festival (2015).",
+  "para5": "It was so cool looking back over not just all of the old films, but also the old adverts including really old whiskey adverts. They’d all be in black and white or written on paper we don’t use anymore, so just feeling those things from almost 70 years ago was brilliant. I’d look forward to it every day getting to look through a few more old films in my spare time.",
+  "para6": "It wasn’t just getting access to the archives that Alice enjoyed. Part of her role was also to contact the directors of the films and attend the events put on by the festival.",
+  "para7": "During the festival itself, I got to meet one of my favourite photographers, Tim Walker, because he directed a short film called, 'The Muse', we were showing. It was quite embarrassing actually because I was quite starstruck and I didn’t know what to say! I also got to meet Robert Kondo, the director of my favourite film at the festival, which happened to be another short film called 'The Dam Keeper'. It's actually been nominated for an Oscar this year, and meeting him was so great. He brought me some signed postcards and badges which was just so lovely. Getting to meet your idols is quite wonderful.",
+  "para8": "“I learned a lot about myself.” Alice also tells us. She believes her placement taught her what she’s capable of.",
+  "para9": "I was working 5 days a week at the Edinburgh International Film Festival, 2 days a week at my other job, and in any time that I was not sleeping, I was doing course work. I learned that I can do it; I think most people could do it. When you have to do something, you just get on with it. It’s a brilliant feeling! Being that dynamic and feeling that alert all of the time is quite exhausting but I felt like I’d achieved something. Every day I thought, yes! I’ve done it.",
+  "para10": "Finally, we asked Alice to sum her placement up in no more than three words. Here’s what she came up with:
+
+“Magical. Exciting and fulfilling.”"
+},
+{
+  "title": " The Welcoming Project",
+  "school": "School of Arts and Creative Industries",
+  "image": "",
+  "caption": "Sam Finch, Daniella Faccenda and Kirsty McLachlan",
+  "course": "Photography",
+  "para": "​Edinburgh Napier University and a charity that provides support for refugees and migrants have worked together to use photography to help newcomers settle in the city.
+  Sam Finch, Daniella Faccenda and Kirsty McLachlan, all final year students on our BA (Hons) Photography course, have been working with city-based The Welcoming as part of a creative project to support a group of 10 participants to capture their first experiences of living in Edinburgh.
+  The students worked with individuals receiving support from the charity to develop their photography skills by exploring the city and surrounding area to capture images of various landmarks including, The Royal Botanic Gardens, The Scottish Parliament and Arthur’s Seat.
+  The project aimed to help those involved develop their technical photograhy skills and learn more about the city. For Sam, Daniella and Kirsty, it was an opportunity to gain teaching and project management experience whilst contributing to a valuable social project.
+  The participants, coming from a wide range of countries including Sudan, Turkey, Argentina, Brazil, Columbia and Spain were encouraged to use what they had captured to help them convey what moving to the city had meant to them and to share personal stories of being new to both the city and Scotland as a whole.
+  Discussions on culture shock, the language barrier, interactions with people and even the weather were all stimulated through the project, helping individuals form new friendships alongside finding common ground in their experiences.",
+  "para2":"Lindsay Morgan, Placement Coordinator for Edinburgh Napier’s, School of Arts and Creative Industries commented: “The project was created as an opportunity for community engagement and a chance for our students to gain real pedagogical and project management experience. Language barriers and social isolation are common amongst refugees and migrants and by creating a visual record, we hoped to transcend these barriers.
+  “Over the past few years, our photography programme has organised several volunteer projects for students and we’re delighted that we’ve been able to work on another great project with a local charity that carries out so much fantastic work within our city. The benefits really have been felt by all those involved.”
+  The Welcoming supports refugees and migrants in Edinburgh, with over 1,000 people from 60 different nationalities benefitting from its range of classes, activities and workshops each year. Its aim is to help Scotland benefit from the diversity, experiences and talents that its participants bring.
+  Elaine Mowat, deputy director of The Welcoming, said: “The project has been an amazing opportunity for our participants to learn new skills, explore the city from new perspectives and benefit from the expertise and enthusiasm of the Edinburgh Napier students. This is exactly the kind of experience that helps newcomers feel welcome and included, and to see Edinburgh as a place where they can succeed in building an exciting new life. We are delighted to have had the opportunity to work with the University and really appreciate all the support that its School of Arts & Creative Industries has provided.”"
+},
+{
+  "title": "Growth Mindset Project",
+  "school": "School of Creative Arts and Creative Industries",
+  "image": "",
+  "caption": "St Davids RC High School Project",
+  "course": "Photography",
+  "para1": "In 2015/16, our BA (Hons) Photography programme teamed up with St David's RC High School again for a creative collaborative project to produce six, 3ft by 12ft banners, to be permanently displayed in the School.",
+  "para2": "Helen Edmund, Stephanie Ramage, Christopher Stewart, Olivia Roberts and Caroline McQuistin from year 3 on the course worked with pupils at the school for 5 months delivering photography lessons and creatively guiding the pupils to design the 6 banners on a Growth Mindset theme. The project is a natural progression from the 2014/15 Resilience Project which won the Creative Edinburgh Collaboration Award and is a continuation of the wonderful partnership between St David's RC High and Edinburgh Napier University.",
+  "para3": "Jennifer Campbell, PT Partnerships, commented, Working with students from Edinburgh Napier University for a second year has been wonderful. The students have ample creativity and technical skills which they used to teach and inspire the pupils. The Growth Mindset, like Resilience, is a key focus at St David's. These banners will share that message whilst enlivening the place where our pupils come to learn.",
+  "para4": "Campbell went on to describe the benefits of the project to pupils at St David's RC High, The pupils were actively involved in all stages of creating the banners, from the initial idea/themes, right through to the final design and editing stages. They've been given access to top of the range equipment and even visited Merchiston campus for a shoot in the photography studio.",
+  "para5": "Colin Cavers, Programme Leader for BA (Hons) Photography, added For our students, volunteering to take part in this project, has given them the opportunity to develop real project management and pedagogical skills as well as applying their growing photographic knowledge in a transferable context. We are committed to working with local partners to create work-related learning opportunities and enhance our communities.",
+  "para6": "The banners will be permanently displayed at St David's RC High School and the artwork will be on display in a temporary exhibition at Merchiston campus from Tuesday 12th April 2016."
+},
+{
+  "title": "The best thing you can do is go on placement",
+  "school": "School of Computing",
+  "image": "",
+  "caption": "Corina Criestea",
+  "course": "Digital Media",
+  "para1": "Meet Corina Cristea. She’s 23, originally from Romania and studies BSc (Hons) Digital Media at Edinburgh Napier University. We met up with her to find out more about two placements she completed last year; one with Age Scotland as a paid creative charity project and the other with Helixion, a banking software company.",
+  "para2": "First she filled us in on all the details of her placements.",
+  "para3": "“The first one (for Age Scotland), they wanted a very classic animation. A cartoon version and a motion graphic version. Both of them were quite simple really, because the target market needed to understand it, and the target market was the elderly so you don’t want it to be too confusing. I had a chat with Lindsay Morgan at the Placement Office and she was very helpful. I had ideas for the projects, so I got involved with the charity. Thinking back, it was a decent project. It was good for the portfolio, and if it’s good for the portfolio, it’s good overall!”",
+  "para4": "“The second placement, it was a bigger one. It was a three month paid placement, and I’m still actually working for them, it was with Helixion down in the west end. At that time I needed to pay rent, and a lot of shopping was overdue!",
+  "para5": "In digital media- which is highly competitive- it’s vital to have as much experience as possible when applying for the top jobs. Corina says she’s happiest the placements she did gave her the chance to build a professional portfolio.",
+  "para6": "“In my field, you can have a CV full of stuff, but that doesn’t really tell the employer anything, because they want to see what you’re capable of. So you need a showreel. If you can show diversity as well, it’s a big plus. You have to show you’re good in all the things you say you’re good in. Examples of your work, it’s essential.  What I did in my placements definitely go into the portfolio, and hopefully that will eventually land me a bigger job!”",
+  "para7": "We ask all the student’s featured on the blog why they chose to do a placement in the first place. For Corina, going on a placement gave her the chance to push herself.",
+  "para8": "“If you feel like you’ve finished something and it’s done with, then I don’t think you show improvement. If you’ve finished your work and there’s still some things that you would change, then it shows why you’re doing the project. You improve yourself and you get to another level from where you started it. If by the end of the project you’re not that happy with it and you feel you could have taken it much further, then that’s a good thing! It means that for the next one, you’ll have more stuff to include. It’s just the process.”",
+  "para9":  "“I can see a difference, though. Usually I’m not that happy at the end, but now I’m starting to be a little bit more happy. I can see a huge improvement in my videos and my work. I think the pressure of being in a work environment and constantly being evaluated by someone is huge. It really challenges you.”",
+  "para10": "To end the interview, we asked Corina the same thing we’ve been asking all the students we’ve met; sum up the placement you did in just three words.",
+  "quote": "“Freedom, I guess. Fun.... ehm (smiling)... And challenging as well.”"
+},
+{
+  "title": "Bo'ness Academy Creative Collaboration",
+  "school": "School of Arts and Creative Industries",
+  "image": "",
+  "caption": "Richard Firth and Trent Jennings",
+  "course": "Product Design",
+  "para": "To mark the Queens 90th birthday, Edinburgh Napier’s Product Design programme and pupils from Bo’ness Academy art department collaborated on an innovative sand casting workshop on Blackness Castle Beach.  Students from both Edinburgh Napier and Bo’ness Academy created commemorative art works comprising the design and production of 40 plus bass relief sculptures, cast in pewter into moulds, created directly from the beach at Blackness Castle.",
+  "para2": "The workshop used traditional craft making processes to introduce sustainable manufacturing processes, using a ‘making through doing’ approach to learning.
+  Richard Firth and Trent Jennings (Programme leader and lecturer for BDes (Hons) Product Design) ran the project and have worked on similar outdoor learning and teaching experiences in both Scotland and Norway.
+​  Richard Firth commented “Increasingly we are aiming to integrate our teaching and learning experiences into communities out with the University. Observing our second year product design students organising, delivering and mentoring S4 and S6 pupils through this innovative learning workshop, has been a terrific validation of learning by teaching and the impact of the widening participation process”.",
+  "para3": "Manna Dobo, art teacher at Bo'ness Academy continued, This has been a wonderful example of learning by doing. It has shown that projects that are experimental are incredibly worthwhile. It encourages a growth mindset in the pupils by allowing them to let go of pre-conceived ideas and showing that they are capable of doing much more than they thought.
+  This workshop has empowered our pupils with a new skillset, work attitude and enthusiasm that they will be able to utilise in many other contexts. They will also be able to pass these skills on to pupils coming after them and this will create a long lasting legacy",
+  "para4": "Mima Fair, year 2 BDes (Hons) Product Design, added “This was a very worthwhile and eye opening experience. It taught me the process of sand casting that no books or tutorial could ever teach me. I really enjoyed it and it was great for the class to bond over. It was very rewarding seeing the end results and doing something practical out with the university”.
+  A celebration will be held at Merchiston campus during More than a Degree Show 2016 to celebrate the work produced.",
+  "link": "www.edinburghnapierdegreeshow.info"
+},
+
+{
+  "title": "I've Learnt so much",
+  "school": "School of Computing",
+  "image": "",
+  "caption": "Maria Oyegbile",
+  "course": "Buisness Information Systems",
+  "para1": "Maria Oyegbile is a BSc (Hons) Business Information Systems student who joined Edinburgh Napier University in 2014 as a direct entrant to second year after completing a HND in Interactive Media. Maria is currently in her third year but is out on placement for 15 months. 'I chose to find a placement because of the advantages that come with it especially in gaining experience in a real work environment. I had never worked in an IT role and I thought this would be a good chance for me to develop myself in preparation for my future career in Project Management.'",
+  "quote1": "'I would strongly encourage anyone who can to give placements a try, they will not regret it.''",
+  "para2": "Maria is currently on work placement with Caledonian Produce which is part of the Bakkavor Group, located in Bo’ness, West Lothian. Caledonian Produce specialises in prepared foods like potatoes, vegetables, side salads and ready meals among others, It's only client is Marks and Spencers. Maria continues, 'Caledonian Produce employs over 1500 employees and is the biggest company I have ever worked for.'",
+  "para3": "'I am the site IT contact, supported by the Group Central Information Systems team in Spalding. My role is very varied which makes it more interesting. It ranges from installation of software and hardware to networking, sorting out user errors in person or via proxy, maintenance of IT equipment like printers, scanners, phones and projectors, project management (my favourite), purchasing of IT equipment, working with third party contractors to resolve user issues, closely working with group IT to resolve issues, training staff in using IT equipment, writing user manuals and carrying out the company IT induction, setting up user company mobiles and desk phones and changing the back-up tapes among others!.'",
+  "quote2": "''​This experience has been very rewarding and beneficial, I have learnt so much in this period.'",
+  "para4": "​It has helped me to better understand what I studied at University before placement and now I have both theoretical and practical knowledge. Having gone for the placement without much knowledge of IT systems, I have been equipped with a vast knowledge. I now understand things like the Intranet, Extranet and Internet even more after having studied them in one of my second year modules (Enterprise Systems).",
+  "para5": "My biggest challenge was networking given that I had never done it before. I didn’t think there would come a day when I would ever get it. Now I can do this in my sleep and I actually enjoy it. Often users move from office to office or new ones come in and I have to connect them to the company network so they are able to access the systems. This is a skill I have picked up during my time at Caledonian Produce.",
+  "para6": "I have gained confidence in dealing with various individuals and groups of individuals on various levels. I have worked on different projects like the file and print server migration, Installation of Internet Explorer 11, upgrade from Windows XP to Windows 7, installation of programs on to Virtual servers among others with different managers, individuals and teams. I have had to communicate with them in person, on the phone and also via email and my confidence has grown immensely.",
+  "quote3": "'I have learnt so much throughout my placement and I believe the skills I have acquired will help me secure a good job after my studies.'",
+  "para7": "'I have learnt how to be professional, deal with various people, address a large group of people, chair meetings, prepare agendas, and send out minutes among others.'",
+  "para8":"Maria goes on to describe the process of applying for work placement opportunities, 'At university, work placements are well advertised by all involved. I remember attending placement workshops which encouraged me to apply and jobs were well promoted on the university site and also on e-Placement Scotland. I got support structuring my CV and also interview skills and technique support was offered.'",
+  "para9":"When out on placement, I was assigned a tutor for the duration, Gemma Webster. She has been to my work place to see my manager and myself. During the first meeting, I was asked if I had any concerns or even if I needed to ask anything. It was good to know that I have someone I can discuss any work issues with if I needed to.",
+  "para10": "I also have support from Moodle, the university site. There is lots of information that has been put on Moodle to help with the weekly log, portfolio and reports. This information was helpful especially during the initial stages of creating my web log.",
+  "para11": "​On site I am fully supported by my manager who is very easy to talk to and work with. We regularly have meetings to catch up on any issues or projects that are happening.",
+  "quote4": "She has also asked me to stay on 'forever' with Caledonian Produce because of how well we get on and how I conduct myself and carry out my job.",
+  "para12": "Finally, as always, Maria summed up her experience in 3 words.",
+  "quote5": "Fantastic, hard work and worthwhile.",
+  "para13": "You can look for paid work placement opportunities in IT at",
+  "link": "www.e-placementscotland.com"
+},
+{
+  "title": "The most life changing and confidence boosting experience.....",
+  "school": "School Of Computing",
+  "image": "",
+  "caption": "Kate Belakova",
+  "course": "Computing",
+  "para": "Kate Belakova, originally from Riga, Latvia, is a BSc Computing student at Edinburgh Napier University. Kate has taken part in three different work placements, including summer roles and a 12 month opportunity. In this article, Kate tells us about her motivations and experiences working in industry. On my work placements, the duties, company culture and locations were very distinct from each other, yet I gained both personal and professional growth after each experience. Work placements look great on your CV and my experience has dramatically increased my employability. Now, I won’t be considered as just a graduate, but also as a graduate developer with more than a year’s relevant experience. This is so important in this competitive and ever evolving industryThe support I received from the University was very valuable. At the beginning of the year, I arranged a meeting with a CV advisor, took part in a mock interview and received warm congratulations when I was offered a placement. A well-structured CV was the main factor for why I was selected for interview, so it’s worth taking some time to seek out the right advice and highlight your best skills."
+  "para2": "Kate told us all about her work placement experiences. The most life changing and confidence boosting experience was my 12 month work placement. I worked as a full stack developer at BlackRock in Edinburgh. It was my first time developing applications that will be used by real clients. In the beginning, it was an unusual transition from being a student to working 9 to 5 in a professional environment. I had to manage more tasks and stick to the schedule. I was very lucky to be working with a supportive team that felt like a small family by the end of the placement."
+  "I developed a great deal of technical and transferable skills such as best practices, new technologies, testing, designing, writing documentation and managing client relationships. On top of that, I improved important soft skills that will help me in my future career and personal life.
+  Kate's advice to you!, So, for those of you who are thinking of whether going for a placement or not I say – Yes! In addition to gaining real work experience, this placement year can help you realise what exactly you like doing in your field. It helps to understand what kind of working environment suits you more (whether it’s a start-up or a big corporate company with a defined hierarchy) and generally what kind of worker you are. It’s surely a very rewarding decision and you won’t regret it."
+},
+{
+  "title": "You can show a potential employer what you're capable of",
+  "school": "School of Arts and Creative Industries",
+  "image": "",
+  "caption": "Heather Thomson",
+  "course": "Journalism",
+  "para1": "Heather Thomson is in her fourth year of studying journalism. In January 2014, she started a six month, one day-per-week placement with Foodies Magazine, an Edinburgh-based, monthly magazine which covers all things food related.",
+  "para2": "We caught up with Heather to find out how her work experience at the magazine went. First off, she told us what she got up to at the company.",
+  "para3": "It’s a very small team, and I was working directly with the editor. Most of the time you’re writing copy or researching it. I’d be given a topic, for example Italian restaurants, and I’d be asked to identify a number of Italian restaurants, taking into account things like good variety, who our audience is and if it’s suitable.",
+  "para4": "Heather says her time at Foodies really helped her grow in confidence.",
+  "para5": "You can show a potential employer just what you’re capable of, because with each issue I got more confident. In the first issue I did, I only did a small amount of work which was directed by the editor.",
+  "para6": "As the months went by, and they felt more confident with what I was able to do, I was prepared to put myself forward for things. It did a lot for my self confidence in my work and by the end, I was prepared to say ‘I can do that!",
+  "para7": "Until I did work experience, I had tremendous doubts about my own writing. I didn’t know if it was at a professional level. When I was getting things published, I looked at my work in a different way. I have confidence in what I write, because I know it is a professional quality.",
+  "para8": "I just wish I'd done it sooner!",
+  "para9": "During her placement, Edinburgh-based Heather also had a magazine module at the Edinburgh Napier. In third year, Journalism students at Edinburgh Napier produce and publish a general interest magazine called Impulse. Heather thinks the experience she learned at Foodies would’ve been perfect for working on Impulse.",
+  "para10": "I wish I’d done the placement just before I’d done the magazine, because I would have had a lot more confidence. When I saw how a very small team got a lot done because everyone knew what they were doing, it was all planned out and we stuck to it. I just wish I’d done it earlier! because now, if I worked for a magazine, I would have a very strong idea of how it should be working.",
+  "para11": "As with all of our placement stories, we’re asking them to sum up their placement experience in 3 words. Here’s Heather's response:",
+  "para12": "Fulfilling. Challenging. Hunger-Making!... That’s the best I can think of, maybe it’s all the food!"
+},
+
+{
+  "title": "I've Gained a Lot from this Experience",
+  "school": "School of Computing",
+  "image": "",
+  "caption": "Brian Long",
+  "course": "Business Information Systems",
+  "para1": "​Brian Long is currently in his third year of BSc (Hons) Business Information Systems. I came over here from Ireland as a mature student. Having already completed a degree, in teaching, I took the difficult decision to come back to University as I didn’t feel I was finished with my education and wasn’t ready for working life just yet. I chose the course, Business Information Systems, as I feel that it is a mixture of two lucrative industries, business and computing, and I want to be part of something of that magnitude.",
+  "para2": "Brian continues, I always had an interest in business but lacked technical skills, which is something I feel is necessary in today’s world, so here I am. Being from a small town in Ireland, of just over one thousand people, coming to Edinburgh, and Edinburgh Napier, was a big change, and one that I did not take lightly. Three years on and I have come to love this city. I can say that University life the second time round is very different; I am older, more mature and more focused on what I want.",
+  "quote": "On hearing the possibility of a fifteen month placement, I jumped at it, as I felt that the experience gained would give me a great taste of working in the industry  and provide my CV with something that many others would not have.",
+  "para3": "I would go as far as saying it was necessary for me to complete, to be able to make decisions about my future.",
+  "para4": "Brian is completing his 15 month work placement at the University of Edinburgh in their IS Applications department. They are located in Dalhousie Land just off the Royal Mile.",
+  "para5": "I work in the area of production management, which is responsible for the day-to-day support, monitoring and maintenance of many key services and systems within the University. My team, Technology Management, are made up of system administrators and database administrators who monitor and maintain live systems to minimise disruptions and down-time of services. Within my team, I work mostly as a systems administrator. I have my own responsibilities to tend to each week and have also had the opportunity to participate in projects to improve services. I have helped upgrade to a new password manager system, then update that system, and have also taken the lead in the population of a Configuration Management Database for which I have given presentations on how to use it to other colleagues.",
+  "para6": "Brian feels that he has gained a lot from this experience, both in knowledge and in lifestyle. In terms of knowledge, I have learned so much about the technical aspects of computing. As a Business Information Systems student, I have always felt that my technical knowledge and experience was lacking, and was much more confident in the business aspects of our course. This was a worry going into a placement that I knew would be technical, but I think that it has been excellent for me and has allowed me to put technical information presented at University into practice in a real life setting, which has really helped develop my skills.",
+  "para7": "In terms of lifestyle, I would say before my placement I was a typical University student; late nights, lack of routine, and, at times, discipline. Working full-time, 9 to 5, has changed all that. I now feel that there is a balance and routine to my life, which I really like. It has changed me for the better as I now work hard during the week and know that going to bed at 10 has to happen to be able to function properly at work.",
+  "quote2": "I still enjoy my evenings and weekends but I feel that placement offers the opportunity to see what working life is like, and I believe that it really does prepare you for the next step which is leaving University.",
+  "para8": "My newly acquired technical knowledge, the confidence I have gained working in this industry and the learning of an appreciation for routine will really help me with my studies moving forward. I am now starting to look beyond University life, to the future, and feel that placements help you mature and gravitate towards that thinking. I now strive to return to University and do my absolute best to secure an excellent degree so I will be attractive to employers and return to something like the life I have lived while on placement. I have really enjoyed it.",
+  "para9": "Edinburgh Napier provide support in the form of a personal tutor for work placements who tracks your progress, marks your reports and meets with you throughout the year to make sure that everything is going well. There are also those in the Placement Office who can be contacted with any issues that are being experienced and, as I can attest to, they are excellent at responding. I feel that the support is appropriate as they are there when you need them but also don’t hold your hand so you are able to experience placement as it should be, like working life.",
+  "para10": "Support from the University and my manager in particular has been excellent. I was made to feel part of the team from day one and there wasn’t a question I couldn’t ask of my colleagues that they would not endeavour to answer. The University also provides a lot of options for training courses for staff, of which I have participated in some and improved my technical knowledge further. These are really worthwhile and comprehensive courses, and for a University student wanting to bolster my CV it really is a no-brainer to complete as many of these as possible to improve my attractiveness to potential employers in the future.",
+},
+{
+  "title": "Do it! Honestly, as difficult or daunting as it may seem, it will be one of the best things you ever do...",
+  "school": "School of Computing",
+  "image": "",
+  "caption": "Gregor Milne",
+  "course": "Computer Systems & Networks",
+  "para": "Gregor Milne is a current Computer Systems & Networks student at Edinburgh Napier University, who took part in a 12 month placement with Caterpillar Inc. We asked Gregor to tell us a little about himself.
+  Like most computing students, I have a real interest in pretty much all things related to computing, whether it be technology, gaming or music. I really try and expose myself to all aspects. Besides computing, I'm extremely interested in motor sports, particularly F1 and IndyCar, and once I graduate, I plan to attend the Indianapolis 500 along with 200,000 plus people. My other real interest is drumming, I've been playing for about 8 years.
+  Gregor goes on to tell us about his motivations for applying for a work placement and the support on offer. What really motivated me to get a placement was attending the Edinburgh Napier University Open Day in 2013, where they promoted the opportunity of undertaking an industrial placement. It sounded like an opportunity, I couldn’t pass up on and immediately made Edinburgh Napier my top choice. Doing a placement year was an easy decision for me because at the end of my degree, I will be competing with other graduates who may have the same degree classification as me. However, in addition, I will have a year’s worth of practical work experience in a demanding environment, which should help move my application to the top of the pile! The university offered a lot of different support, such as a placement tutor and placement coordinator, providing you with all the information you need!",
+  "para2": "I completed my placement year at Caterpillar Inc. down in Bournemouth, England. The year was an experience, I wouldn’t take back for anything! I made so many great friends whilst also gaining practical work experience that I didn’t think would quite be possible on a placement year. The work was demanding, but more than anything it was relevant and interesting. I worked on multiple projects that will impact the business for years to come and I hope to stay in contact with Caterpillar as I progress through my studies. Caterpillar offered me many ways of expanding my knowledge during my time with them. One notable course was the lean business practice course, as well as a multitude of online resources to self-train with.
+  The biggest thing I got out of my year with them was the unbelievable amount of business knowledge I left with. I entered with virtually zero knowledge and anytime there was a meeting or online presentation regarding the business I attended it. I want to take this chance to thank Caterpillar again for just an incredible year and letting me work for them and their historic business.
+  Gregor offers this advice to students considering whether or not to take part in a work placement. Do it! Honestly, as difficult or daunting as it may seem it will be one of the best things you ever do. I can only think of positives when looking back on my year at Caterpillar and I do not believe I would be the same person without that company or my time on placement. Also, look for opportunities outside of Scotland because there are some truly incredible placements out there waiting for a student and why can’t that student be you?
+  Finally, I want to pass on a bit of advice a former placement student gave to me, this placement will be whatever you make it, you can choose to do the minimal amount or you can choose to take every chance and immerse yourself fully with the job, so make the most of it."
+},
+{
+  "title": "We all want to elevate each other",
+  "school": "School of engineering and the built environment ",
+  "image": "",
+  "caption": "Maxime Garcia",
+  "course": "Civil and timber engineering",
+  "para": "Maxime Garcia’s first choice was Edinburgh Napier when he decided he wanted to leave his native France to study abroad. “I wanted to explore somewhere else and Scotland just seemed like a natural choice for me, you know?” he says. “I completed the equivalent of an HND in France then I had the opportunity to come here. I wanted to have international experience and Edinburgh is an eclectic city, it is tiny, but incredibly interesting to me.”",
+  "para2": "It wasn’t just the Edinburgh lifestyle, however, that attracted Max to the capital. As a BSc (Hons) Civil and Timber Engineering student, it was the career opportunities he’d have access to in Scotland that drew him in. “Scotland, you know, it has... something pulling me towards it. Scotland has incredible natural resources, they’re huge. The trees that will be grown sustainably over the next decade will be enough to create 3 million houses to build in the UK or to export.”",
+  "para3": "Max, who completed his degree in 2014 and since returned to study a part-time Masters course, made the most of every opportunity he had at Edinburgh Napier to further his career prospects. This included jumping at the chance to undertake a summer internship with CarbonLite Design and Build, a timber construction company in Invergordon, just north of Inverness.",
+  "para4": "“I was offered the placement after I did my honours dissertation under the supervision of Robert Hairstans, who is the Head of the Centre for  Offsite Construction and Innovative Structures, or COCIS. He helped motivate me to undertake an internship with the company as he was collaborating with the company on the development of innovative structures using local timber. COCIS is based at Edinburgh Napier, which is part of the Institute for Sustainable Construction. It's a pretty successful institute, and that’s because they have so many links with the industry.”",
+  "para5": "COCIS and the Institute of Sustainable Construction (ISC) are organisations in the School of Engineering and the Built Environment at Edinburgh Napier, which work closely with companies in the engineering and construction industries in Scotland to produce world-leading and valuable research in to the challenges facing the industry. As a benefit of the connection, students like Max often have the opportunity to go on placement with companies in the field.",
+  "para6": "“The organisations are  really active in developing these new innovative systems, trying to link the industrial part of it - the research - and put it into context.” says Max about their work. “If you have the research and you keep it all to yourself, then what's the point? But here, at Edinburgh Napier, for me it's really important that everything they do is based on what the industry requires and on how to improve it. Edinburgh Napier supports the industry, and the industry supports the University. It's like a closed circuit.”",
+  "para7": "These kinds of valuable links to the industry are one of the key benefits of the practical skills-focussed outlook Edinburgh Napier has. Max, who’s since returned to CarbonLite after his summer placement while studying for his Masters, says the close relationship between the University and industry is beneficial for everyone. “In the Timber industry, we’re not trying to compete with each other, we all want to elevate each other. It's all driven by opportunities and skills transfer, and with my company, because of the links that we have and because I'm still a student, we get advice on everything I do from the COCIS. They really aim all their work to help the industry evolve, because we all share the same vision. We will get there. We're not at the stage where we don't really know what to do, we know where we want to get to and it's happening, thanks to COCIS.”",
+  "para8": "“I don't know what to say to express how helpful Edinburgh Napier has been. It's more than just an opportunity, it's more than just creating a link. It's like creating a connection and then following it through to success, and by success, I mean taking timber construction to the next stage.”",
+  "para9": "As with all the students featured on ENhance, Max also summed up his placement in three words. Well, he certainly attempted to keep it to just three!",
+  "quote": "“I would say sustainable. It's the only word I would use, because sustainable means viable, durable and environmental, and these three words make sustainable. So (laughing) there you go!”"
+},
