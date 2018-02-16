@@ -3,27 +3,29 @@
 {% block body %}
 <body>
 <!-- Start of corousel code !-->
-<div id="carouselIndicators" class="carousel slide" data-ride="carousel" width="100%" height="45%">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
-    <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
-  <div class="carousel-inner" role="listbox">
-    <!-- First carousel item !-->
+  <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block img-fluid" src="/static/2.jpg" alt="First slide">
+      <img class="d-block w-100" src="static/3.jpg" alt="First slide">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Somthing</h5>
+        <p>About Something</p>
+  </div>
     </div>
-    <!-- Second carousel item- !-->
     <div class="carousel-item">
-      <img class="d-block img-fluid" src="/static/2.jpg" alt="Second slide">
+      <img class="d-block w-100" src="static/2.jpg" alt="Second slide">
     </div>
-    <!-- Third carousel item !-->
     <div class="carousel-item">
-      <img class="d-block img-fluid" src="/static/2.jpg" alt="Third slide">
+      <img class="d-block w-100" src="static/4.jpg" alt="Third slide">
     </div>
   </div>
 </div>
+
 <!-- Loading and sizing the banner !-->
 <img src="static/b6.png" class="img-responsive rounded" width="100%" height="45%">
 <h3>Top Stories From The School of Computing</h3>
