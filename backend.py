@@ -14,15 +14,11 @@ app = Flask(__name__)
 def main():
     return render_template('main.html')
 
-@app.route("/uploadchoice", methods=['POST','GET'])
-def uploadchoice():
-    return render_template('uploadchoice.html')
-
 @app.route("/textupload", methods=['POST','GET'])
 def text():
     return render_template('textupload.html')
 
-@app.route("/adminlanding", methods=['POST','GET'])
+@app.route("/admin", methods=['POST','GET'])
 def admin():
     return render_template('admin.html')
 
