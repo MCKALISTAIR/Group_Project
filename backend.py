@@ -30,6 +30,14 @@ def analyticstestpage():
 def uploadinstructions():
     return render_template('uploadinstructions.html')
 
+@app.route("/morestories", methods=['POST','GET'])
+def morestories():
+    return render_template('morestories.html')
+
+@app.route("/story", methods=['POST','GET'])
+def story():
+    return render_template('storytemp.html')
+
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
@@ -37,10 +45,6 @@ def page_not_found(e):
 @app.errorhandler(500)
 def internal_error(error):
     return render_template('500.html'), 500
-
-@app.route("/socpage", methods=['POST','GET'])
-def socpage():
-    return render_template('socpage.html')
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
