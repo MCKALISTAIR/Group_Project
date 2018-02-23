@@ -74,7 +74,7 @@ if __name__ == "__main__":
 
 def putData(data):
     try:
-        
+
            # ADD VALIDATION HERE
         openFile.write(serialisedData)          # IF INVALID DO NOT PROCEED WITH WRITE!
         openFile.close()
