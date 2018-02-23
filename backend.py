@@ -13,8 +13,8 @@ app = Flask(__name__)
 
 @app.route("/", methods=['POST','GET'])
 def main():
-    try
-:        if request.method == "POST":
+    try:        
+        if request.method == "POST":
             text = request.form['password']
             if text == "password":
                 return redirect(url_for('admin'))
