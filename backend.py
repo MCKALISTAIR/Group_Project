@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
 import json
-from flask import Flask, render_template, url_for, request, session, redirect, abort
+from flask import Flask, session, render_template, url_for, request, session, redirect, abort
 #from flask_pymongo import PyMongo
 # import bcrypt
-
 app = Flask(__name__)
-
+app.secret_key = 'qGseyftsYb9rdYIIfz2cXjhJT9ZJwIxI8Pr0YvUd'
 #Mongo DB
 # app.config['MONGO_DBNAME'] = 'group_project_login'
 # app.config['MONGO_URI'] = 'mongodb://40205331:rangers17@ds125198.mlab.com:25198/group_project_login'
@@ -13,7 +12,7 @@ app = Flask(__name__)
 
 @app.route("/", methods=['POST','GET'])
 def main():
-    try:        
+    try:
         if request.method == "POST":
             text = request.form['password']
             if text == "password":
@@ -43,7 +42,10 @@ def text():
 
 @app.route("/admin", methods=['POST','GET'])
 def admin():
-    return render_template('admin.html')
+    if session.get('status', None) != "admin":
+        return redirect(url_for('main'))
+    else:
+        return render_template('admin.html')
 
 @app.route("/analyticstestpage", methods=['POST','GET'])
 def analyticstestpage():
@@ -60,6 +62,24 @@ def morestories():
 @app.route("/story", methods=['POST','GET'])
 def story():
     return render_template('storytemp.html')
+
+@app.route("/login", methods=['POST','GET'])
+def login():
+    # Check that the user supplied details in the POST
+    if request.method == 'POST':
+        if request.form['passwd'] == "":
+            return render_template('admin.html')
+        else:
+            if request.form['passwd'] == "pass":
+                session['user'] = "Admin"
+                session['status'] = "admin"
+
+                return redirect(url_for('admin'))
+
+            else:
+                return redirect(url_for('main'))
+    else:
+        return render_template('admin.html')
 
 @app.errorhandler(404)
 def page_not_found(e):

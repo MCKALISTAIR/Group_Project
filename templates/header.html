@@ -17,6 +17,10 @@
   </a>
 </header>
 
+{% if session.get('status', None) == "admin": %}
+    <h3>Logged in as Admin</h3>
+{% endif %}
+
 {% block body %}
 <!--Keep Empty, this is where the content from each page will be held !-->
 {% endblock %}
@@ -26,7 +30,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Admin login</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -34,16 +38,15 @@
       <div class="modal-body">
         <h2>Hello</h2>
         <p>Please Enter Password Below</p>
+        <p>Password can be obtained from somewhere</p>
         <!-- Written by Kyle -->
-       <form class ="form-inline" method="post">
-           <!-- , how I would like any future buttons or text boxes to be written -->
-          <input type="password" class="form-control" placeholder="Password" name="password" value ="{{request.form.password}}">
-          </div>
-          <div class="modal-footer">
-            <input class ="btn btn-primary" type = "submit" value= login>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
+       <form action="{% print url_for('login') %}" class ="form-inline" method="post">
+          <input type = "password" class = "form-control" placeholder="password" name = "passwd">
+          <input class ="btn btn-default" type = "submit" value = login>
+          <!-- , how I would like any future buttons or text boxes to be written -->
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </form>
+      </div>
     </div>
   </div>
 </div>
@@ -55,7 +58,7 @@
       <!-- Footer text!-->
       <span class="text-muted align-right"> © 2018 - Edinburgh Napier University</span>
       <!-- Creates the login modal !-->
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Admin Login</button>
+      <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">Admin Login</button>
     </div>
   </div>
 </footer>
