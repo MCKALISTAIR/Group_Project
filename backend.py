@@ -70,6 +70,7 @@ def login():
         if request.form['passwd'] == "":
             return render_template('admin.html')
         else:
+            #this has to change when the database gets done
             if request.form['passwd'] == "pass":
                 session['user'] = "Admin"
                 session['status'] = "admin"
