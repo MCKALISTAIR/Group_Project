@@ -5,8 +5,7 @@
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <script src="static/js/bootstrap.bundle.min.js"></script>
-  <script src="static/js/bootstrap.bundle.js"></script>
+
   <link rel="stylesheet" href="/static/css/bootstrap.css">
   <script src="static/js/bootstrap.js"></script>
   <!-- Carousel -->
@@ -44,11 +43,12 @@
       <div class="modal-body">
         <h2>Hello</h2>
         <p>Please Enter Password Below</p>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" value="Submit">Login</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!-- Written by Kyle -->
+       <form action="" class ="form-inline" method="post">
+          <input type = "password" class = "form-control" placeholder="password" name = "password" value = "{{request.form.password}}">
+          <input class ="btn btn-default" type = "submit" value = login>
+          <!-- , how I would like any future buttons or text boxes to be written -->
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
@@ -68,15 +68,7 @@
 </footer>
 
 
-<!--Option for a footer
-<footer class="footer text-center" style="background-color:lightgrey;">
-  <div class="container text-center">
-    <p class="text-muted credit" style="color:#fff">© 2018 - Edinburgh Napier University</p>
-      <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">Admin Login</button>
-    </div>
-  </div>
-</footer>
-!-->
+
 
 
 
