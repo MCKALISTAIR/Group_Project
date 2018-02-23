@@ -8,18 +8,9 @@
 
   <link rel="stylesheet" href="/static/css/bootstrap.css">
   <script src="static/js/bootstrap.js"></script>
-  <!-- Carousel -->
-  <!-- <script language="JavaScript" type="text/javascript">
-    $(document).ready(function(){
-      $('.carousel').carousel({
-        interval: 3000
-      })
-    });
-  </script> -->
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="hgfds">
 </head>
 
-<!-- Creates the banner!-->
 <header>
   <a href="/">
     <h1>Enhanced Placement Stories</h1>
@@ -44,16 +35,18 @@
         <h2>Hello</h2>
         <p>Please Enter Password Below</p>
         <!-- Written by Kyle -->
-       <form action="" class ="form-inline" method="post">
-          <input type = "password" class = "form-control" placeholder="password" name = "password" value = "{{request.form.password}}">
-          <input class ="btn btn-default" type = "submit" value = login>
-          <!-- , how I would like any future buttons or text boxes to be written -->
-      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
+       <form class ="form-inline" method="post">
+           <!-- , how I would like any future buttons or text boxes to be written -->
+          <input type="password" class="form-control" placeholder="Password" name="password" value ="{{request.form.password}}">
+          </div>
+          <div class="modal-footer">
+            <input class ="btn btn-primary" type = "submit" value= login>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </form>
     </div>
   </div>
 </div>
-
 
 <!--This creates the footer !-->
 <footer class="footer" style="background-color:lightgrey;">
