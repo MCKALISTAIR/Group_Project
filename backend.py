@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import json
-from flask import Flask, session, render_template, url_for, request, session, redirect, abort
+from flask import Flask, flash, session, render_template, url_for, request, session, redirect, abort
 #from flask_pymongo import PyMongo
 # import bcrypt
 app = Flask(__name__)
@@ -15,9 +15,10 @@ def main():
     try:
         if request.method == "POST":
             text = request.form['password']
-            if text == "password":
+            if text == "pass":
                 return redirect(url_for('admin'))
             else:
+                flash('wrong password fool')
                 return render_template("main.html")
     except Exception as e:
         return redirect(url_for('story'))
@@ -62,7 +63,10 @@ def morestories():
 @app.route("/story", methods=['POST','GET'])
 def story():
     return render_template('storytemp.html')
-
+@app.route("/logout")
+def logout():
+    session['logged_in'] = False
+    return render_template('main.html')
 @app.route("/login", methods=['POST','GET'])
 def login():
     # Check that the user supplied details in the POST
@@ -71,7 +75,7 @@ def login():
             return render_template('admin.html')
         else:
             #this has to change when the database gets done
-            if request.form['passwd'] == "pass":
+            if request.form['passwd'] == "password":
                 session['user'] = "Admin"
                 session['status'] = "admin"
 

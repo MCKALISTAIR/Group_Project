@@ -21,3 +21,6 @@
 .mybutton:before{
      background-image : url(https://www.iconfinder.com/icons/2878029/media_network_photo_social_video_web_icon#size=256);
 }
+.filterpad {
+padding: 20px;
+}
