@@ -5,23 +5,9 @@ from flask import Flask, flash, session, render_template, url_for, request, sess
 # import bcrypt
 app = Flask(__name__)
 app.secret_key = 'qGseyftsYb9rdYIIfz2cXjhJT9ZJwIxI8Pr0YvUd'
-#Mongo DB
-# app.config['MONGO_DBNAME'] = 'group_project_login'
-# app.config['MONGO_URI'] = 'mongodb://40205331:rangers17@ds125198.mlab.com:25198/group_project_login'
-# mongo = PyMongo(app)
 
 @app.route("/", methods=['POST','GET'])
 def main():
-    try:
-        if request.method == "POST":
-            text = request.form['password']
-            if text == "pass":
-                return redirect(url_for('admin'))
-            else:
-                flash('wrong password fool')
-                return render_template("main.html")
-    except Exception as e:
-        return redirect(url_for('story'))
     return render_template('main.html')
 
 @app.route("/textupload", methods=['POST','GET'])
@@ -43,7 +29,7 @@ def text():
 
 @app.route("/admin", methods=['POST','GET'])
 def admin():
-    if session.get('status', None) != "admin":
+    if .get('status', None) != "admin":
         return redirect(url_for('main'))
     else:
         return render_template('admin.html')
@@ -63,10 +49,15 @@ def morestories():
 @app.route("/story", methods=['POST','GET'])
 def story():
     return render_template('storytemp.html')
-@app.route("/logout")
+
+
+@app.route('/logout')
 def logout():
-    session['logged_in'] = False
-    return render_template('main.html')
+    session['user'] = "User"
+    session['status'] = "User"
+    flash('You have been logged out')
+    return redirect(url_for('main.html'))
+
 @app.route("/login", methods=['POST','GET'])
 def login():
     # Check that the user supplied details in the POST
@@ -82,9 +73,11 @@ def login():
                 return redirect(url_for('admin'))
 
             else:
+                flash('Wrong password fool')
                 return redirect(url_for('main'))
     else:
         return render_template('admin.html')
+
 
 @app.errorhandler(404)
 def page_not_found(e):
