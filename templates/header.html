@@ -22,10 +22,27 @@
     <h3>Logged in as Admin</h3>
 {% endif %}
 
+{% if session.get('status', None) == "User": %}
+    <h3>user</h3>
+{% endif %}
+<body>
+  <!doctype html>
+  <title>Placement webiste</title>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul class=flashes>
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+
+
 {% block body %}
 <!--Keep Empty, this is where the content from each page will be held !-->
 {% endblock %}
-
+</body>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -57,8 +74,14 @@
       <!-- Footer text!-->
       <a href="https://www.napier.ac.uk" class="text-muted align-right">© 2018 - Edinburgh Napier University</a>
       <!-- Creates the login modal !-->
-      <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">Admin Login</button>
-      <button type="button" class="btn btn-secondary">Logout</button>
+      <!--  <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">Admin Login</button> !-->
+      {% if session.get('status', None) != "admin": %}
+            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">Admin Login</button>
+      {% endif %}
+      {% if session.get('status', None) == "admin": %}
+          <li><a href="/logout">Logout <span class="sr-only">(current)</span></a></li>
+      {% endif %}
+    <!--  <li><a href="/logout">Logout <span class="sr-only">(current)</span></a></li>!-->
     </div>
   </div>
 </footer>
