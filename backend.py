@@ -29,7 +29,7 @@ def text():
 
 @app.route("/admin", methods=['POST','GET'])
 def admin():
-    if .get('status', None) != "admin":
+    if session.get('status', None) != "admin":
         return redirect(url_for('main'))
     else:
         return render_template('admin.html')
@@ -53,10 +53,10 @@ def story():
 
 @app.route('/logout')
 def logout():
-    session['user'] = "User"
-    session['status'] = "User"
+    session['user'] = ""
+    session['status'] = ""
     flash('You have been logged out')
-    return redirect(url_for('main.html'))
+    return redirect(url_for('main'))
 
 @app.route("/login", methods=['POST','GET'])
 def login():
@@ -78,6 +78,10 @@ def login():
     else:
         return render_template('admin.html')
 
+
+@app.errorhandler(403)
+def page_not_found(error4):
+    return render_template('403.html'), 404
 
 @app.errorhandler(404)
 def page_not_found(e):

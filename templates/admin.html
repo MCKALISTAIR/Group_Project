@@ -1,9 +1,10 @@
 {% extends "header.html" %}
 
 {% block body %}
+{% if session.get('status', None) != "admin": %}
+      return redirect(url_for('403'))
+{% endif %}
 <body>
-
-
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-12 col-md-6">
