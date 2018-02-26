@@ -7,38 +7,15 @@
 <h3>Upload a Story!</h3>
 <form method="post">
   <fieldset>
-    <div class"form-group">
-      <input class="form-control" type="text" name="Title" placeholder="Title">
-    </div>
-    <div class"form-group">
-      <input class="form-control" type="text" name="Caption" placeholder="Caption//For Tile On Front Page">
-    </div>
-    <p>Check Out The Templates(LINK)To See How The Page Will Be Set Up</p>
-    <div class"form-group">
-      <input class="form-control" type="text" name="School" placeholder="School">
-    </div>
-    <div class"form-group">
-      <input class="form-control" type="text" name="Course" placeholder="Course">
-    </div>
-    <div class"form-group">
-      <textarea class="form-control" type="text" name="StoryPara" placeholder="Paragragh One" rows="3"></textarea>
-    </div>
-    <div class"form-group">
-      <textarea class="form-control" type="text" name="StoryParaTwo" placeholder="Paragragh Two" rows="3"></textarea>
-    </div>
-    <div class"form-group">
-      <textarea class="form-control" type="text" name="StoryParaThree" placeholder="Paragragh Three" rows="3"></textarea>
-    </div>
-    <div class"form-group">
-      <textarea class="form-control" type="text" name="StoryParaFour" placeholder="Paragragh Four" rows="3"></textarea>
-    </div>
-    <div class"form-group">
-      <input class="form-control" type="text" name="Quote" placeholder="Quote">
-    </div>
-    <div class="form-group">
-      <input type=file name="photos" multiple>
-    </div>
-    <button class="btn btn-primary" value="submit">Submit</button>
+    <form action = "{{url_for('text')}}" class = "form-inline" method = "post">
+      <input type = "text" class = "form-control" placeholder = "" name = "title" value = "{{request.form.title}}">
+      <textarea  type ="text" class ="form-control" placeholder ="Paragragh One" name ="StoryPara" rows = "3"></textarea>
+      <textarea type ="text" class ="form-control" placeholder ="Paragragh Two" name ="StoryParaTwo" rows = "3" value = "{{request.form.para_two}}"></textarea>
+      <textarea type ="text" class ="form-control" placeholder ="Paragragh Three" name ="StoryParaThree" rows = "3" value = "{{request.form.para_three}}"></textarea>
+      <textarea type ="text" class ="form-control" placeholder ="Paragragh Four" name ="StoryParaFour" rows = "3" value = "{{request.form.para_Four}}"></textarea>
+      <input type="text" class="form-control" placeholder="Quote" name="Quote" value = "{{request.form.quote}}">
+      <input type=file name="photos">
+      <input class = "btn btn-default" type = "submit" value = "Submit Story">
     <a href="/admin" class="btn btn-secondary" role="button">Back to admin home</a>
   </fieldset>
 </form>
