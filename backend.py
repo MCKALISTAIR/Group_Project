@@ -22,7 +22,7 @@ def text():
             stories['para4'] = request.form['StoryParaFour']
             stories['quote'] = request.form['Quote']
             file = 'stories.json'
-            with open(file, 'w') as filepath:
+            with open(file, 'a') as filepath:
                 json.dump(stories, filepath)
     except Exception as e:
         return render_template('admin.html')
