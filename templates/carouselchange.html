@@ -1,0 +1,21 @@
+{% extends "header.html" %}
+
+{% block body %}
+{% if session.get('status', None) != "admin": %}
+      return redirect(url_for('403'))
+{% endif %}
+<body>
+<div class="container">
+<h3>Change carousel images</h3>
+<form method="post">
+  <fieldset>
+    <div class"form-group">
+      <input class="form-control" type="text" name="url" placeholder="URL">
+    </div>
+    <button class="btn btn-primary" value="submit">Submit</button>
+    <a href="/admin" class="btn btn-secondary" role="button">Back to admin home</a>
+  </fieldset>
+</form>
+</div>
+</body>
+{% endblock %}
