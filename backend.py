@@ -14,6 +14,7 @@ def main():
 def text():
     try:
         if request.method == "POST":
+            file = 'stories.json'
             stories = {}
             stories['title'] = request.form['title']
             stories['para1'] = request.form['StoryPara']
@@ -21,9 +22,8 @@ def text():
             stories['para3'] = request.form['StoryParaThree']
             stories['para4'] = request.form['StoryParaFour']
             stories['quote'] = request.form['Quote']
-            file = 'stories.json'
-            with open(file, 'a') as filepath:
-                json.dump(stories, filepath)
+            with open(file, 'a') as f:
+                json.dump(stories, f)
     except Exception as e:
         return render_template('admin.html')
     return render_template('textupload.html')
