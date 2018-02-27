@@ -2,6 +2,9 @@
 
 {% block body %}
 <body>
+  {% if session.get('status', None) == "admin": %}
+  <button type="button" class="btn float-right btn-secondary">Enter edit mode</button>
+  {% endif %}
   <h1>Title</h1>
   <h2>Tagline</h2>
   <p>PARA 1</p>

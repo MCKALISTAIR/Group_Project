@@ -46,6 +46,10 @@ def uploadinstructions():
 def morestories():
     return render_template('morestories.html')
 
+@app.route("/carouselchange", methods=['POST','GET'])
+def carouselchange():
+    return render_template('carouselchange.html')
+
 @app.route("/story", methods=['POST','GET'])
 def story():
     return render_template('storytemp.html')
