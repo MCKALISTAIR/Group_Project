@@ -30,17 +30,23 @@ def text():
 @app.route("/admin", methods=['POST','GET'])
 def admin():
     if session.get('status', None) != "admin":
-        return redirect(url_for('main'))
+        abort(403)
     else:
         return render_template('admin.html')
 
 @app.route("/analyticstestpage", methods=['POST','GET'])
 def analyticstestpage():
-    return render_template('analyticstestpage.html')
+    if session.get('status', None) != "admin":
+        abort(403)
+    else:
+        return render_template('analyticstestpage.html')
 
 @app.route("/uploadinstructions", methods=['POST','GET'])
 def uploadinstructions():
-    return render_template('uploadinstructions.html')
+    if session.get('status', None) != "admin":
+        abort(403)
+    else:
+        return render_template('uploadinstructions.html')
 
 @app.route("/morestories", methods=['POST','GET'])
 def morestories():
@@ -48,7 +54,10 @@ def morestories():
 
 @app.route("/carouselchange", methods=['POST','GET'])
 def carouselchange():
-    return render_template('carouselchange.html')
+    if session.get('status', None) != "admin":
+        abort(403)
+    else:
+        return render_template('carouselchange.html')
 
 @app.route("/story", methods=['POST','GET'])
 def story():
@@ -67,7 +76,8 @@ def login():
     # Check that the user supplied details in the POST
     if request.method == 'POST':
         if request.form['passwd'] == "":
-            return render_template('admin.html')
+            flash('You must enter a password')
+            return render_template('main.html')
         else:
             #this has to change when the database gets done
             if request.form['passwd'] == "password":
@@ -85,7 +95,7 @@ def login():
 
 @app.errorhandler(403)
 def page_not_found(error4):
-    return render_template('403.html'), 404
+    return render_template('403.html'), 403
 
 @app.errorhandler(404)
 def page_not_found(e):
