@@ -8,23 +8,25 @@ app.secret_key = 'qGseyftsYb9rdYIIfz2cXjhJT9ZJwIxI8Pr0YvUd'
 
 @app.route("/", methods=['POST','GET'])
 def main():
+    flash("Hello, I'm a flash!")
     return render_template('main.html')
 
 @app.route("/textupload", methods=['POST','GET'])
 def text():
-    """
     try:
         if request.method == "POST":
-            openFile = open("stories.json","w")
-            story = {}
-            story['title'] = 'title'
-            story['para1'] = 'paragraph_one'
-            serialisedData = json.dumps(stories)
-            openFile.write(serialisedData)
-            openFile.close()
+            file = 'stories.json'
+            stories = {}
+            stories['title'] = request.form['title']
+            stories['para1'] = request.form['StoryPara']
+            stories['para2'] = request.form['StoryParaTwo']
+            stories['para3'] = request.form['StoryParaThree']
+            stories['para4'] = request.form['StoryParaFour']
+            stories['quote'] = request.form['Quote']
+            with open(file, 'a') as f:
+                json.dump(stories, f)
     except Exception as e:
         return render_template('admin.html')
-        """
     return render_template('textupload.html')
 
 @app.route("/admin", methods=['POST','GET'])
@@ -107,28 +109,3 @@ def internal_error(error):
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
-
-def putData(data):
-    try:
-
-           # ADD VALIDATION HERE
-        openFile.write(serialisedData)          # IF INVALID DO NOT PROCEED WITH WRITE!
-        openFile.close()
-
-        return
-    except ValueError:
-        print("Coundn't write file data: ", sys.exc_info()[0])
-        raise
-
-    except:
-        print("Unexpected error when writing file: ", sys.exc_info()[0])
-        raise
-
-#paragraph_one = request.form['ParaOne']
-#paragraph_two = request.form['ParaTwo']
-#paragraph_three = request.form['ParaThree']
-#paragraph_four = request.form['ParaFour']
-#quote = request.form['quote']
-#story['para2'] = paragraph_two
-#story['para3'] = paragraph_three
-#story['para4'] = paragraph_four
