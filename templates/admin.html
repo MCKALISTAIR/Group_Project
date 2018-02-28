@@ -1,9 +1,6 @@
 {% extends "header.html" %}
 
 {% block body %}
-{% if session.get('status', None) != "admin": %}
-      return redirect(url_for('403'))
-{% endif %}
 <body>
   <div class="container-fluid">
     <div class="row" style="padding:10px;">
@@ -28,7 +25,7 @@
     </div>
     <div class="row" style="padding:10px;">
       <div class="col-xs-12 col-md-6">
-        <a href="/" title=""><img src="/static/images/carBtn.png"></a>
+        <a href="/carouselchange" title=""><img src="/static/images/carBtn.png"></a>
       </div>
       <div class="col-xs-12 col-md-6">
           <a href="/analyticstestpage" title=""><img src="/static/images/statBtn.png"></a>
