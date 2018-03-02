@@ -6,6 +6,7 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
   <script src="static/js/bootstrap.bundle.min.js"></script>
+  <script defer src="/static/fontawesome/fontawesome-all.js"></script>
   <script src="static/js/bootstrap.bundle.js"></script>
   <link rel="stylesheet" href="/static/css/bootstrap.css">
   <script src="static/js/bootstrap.js"></script>
@@ -90,7 +91,10 @@
       {% endif %}
       {% if session.get('status', None) == "admin": %}
           <li><a href="/logout">Logout <span class="sr-only">(current)</span></a></li>
+          <a href="/admin"><i class="fas fa-id-card" title="Do you like my fa-coq icon?"></i></a>
       {% endif %}
+      <a href="/logout"><i class="fab fa-instagram" title="Do you like my fa-coq icon?"></i></a>
+      <a href="/"><i class="fas fa-home fa-fw" title="Do you like my fa-coq icon?"></i></a>
     <!--  <li><a href="/logout">Logout <span class="sr-only">(current)</span></a></li>!-->
     </div>
   </div>

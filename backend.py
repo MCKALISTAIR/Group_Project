@@ -61,6 +61,13 @@ def carouselchange():
     else:
         return render_template('carouselchange.html')
 
+@app.route("/videoinstructions", methods=['POST','GET'])
+def videoinstructions():
+    if session.get('status', None) != "admin":
+        abort(403)
+    else:
+        return render_template('videoinstructions.html')
+
 @app.route("/story", methods=['POST','GET'])
 def story():
     return render_template('storytemp.html')
