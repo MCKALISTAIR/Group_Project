@@ -16,17 +16,18 @@ def text():
     try:
         if request.method == "POST":
             file = 'stories.json'
-            stories = {}
-            stories['title'] = request.form['title']
-            stories['para1'] = request.form['StoryPara']
+            '''stories['para1'] = request.form['StoryPara']
             stories['para2'] = request.form['StoryParaTwo']
             stories['para3'] = request.form['StoryParaThree']
             stories['para4'] = request.form['StoryParaFour']
             stories['quote'] = request.form['Quote']
+
             with open(file, 'a') as f:
-                json.dump(stories, f)
+                json.dump(stories, f)'''
+            with open(file, 'r') as f:
+                data = json.load(f)
     except Exception as e:
-        return render_template('admin.html')
+        print(e)
     return render_template('textupload.html')
 
 @app.route("/admin", methods=['POST','GET'])
@@ -116,3 +117,15 @@ def internal_error(error):
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
+
+'''def readFile(file, title):
+    try:
+        with open(file, 'r') as filepath:
+            print('jjgjg')
+            data = json.load(filepath)
+            for r in data:
+                if r['title'] == title:
+                    print(r['title'])
+                    print('loool')
+    except Exception as e:
+        return render_template('admin.html')'''
