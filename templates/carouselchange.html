@@ -8,10 +8,8 @@
 <div class="container">
 <h3>Change carousel images</h3>
 <p>This page is used to change the images on the main page carousel</p>
-<p>Full upload instructions can be found here</p>
-<a class="btn btn-link" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-here
-</a>
+<p>Full upload instructions can be found <span><a class="btn btn-link" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+here</a>
   <div class="collapse" id="collapseExample">
     <div class="well">
 Life's like a road that you travel on
@@ -24,13 +22,18 @@ Where brave are free and lovers soar
 Come ride with me to the distant shore
     </div>
   </div>
+ <span>
+</p>
+
 <form method="post">
-  <input id="input-b2" name="input-b2" type="file" class="file" data-show-preview="true">
   <fieldset>
+    <input type='file' accept="image/*"/>
+    <img id="myImg" src="#" alt="your image" />
     <div class"form-group">
       <input class="form-control" type="text" name="url" data-original-title="Tooltip" placeholder="URL to link image to">
     </div>
     <button class="btn btn-primary" value="submit">Submit</button>
+    <button class="btn btn-secondary" value="submit">Clear</button>
     <a href="/admin" class="btn btn-secondary" role="button">Back to admin home</a>
   </fieldset>
 </form>
