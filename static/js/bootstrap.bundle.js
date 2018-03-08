@@ -94,6 +94,22 @@ var Util = function ($$$1) {
       end: 'transitionend'
     };
   }
+	$(function () {
+    $(":file").change(function () {
+			if (this.width != 500 && this.height !=500){
+				alert("Resolution check");
+			};
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = imageIsLoaded;
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+
+function imageIsLoaded(e) {
+    $('#myImg').attr('src', e.target.result);
+};
 
   function transitionEndEmulator(duration) {
     var _this = this;

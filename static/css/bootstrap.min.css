@@ -104,3 +104,4 @@ padding: 20px;
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
 }
+.social-icon {display: inline-block; margin: 0 10px}
