@@ -8,14 +8,22 @@
 <form method="post">
   <fieldset>
     <form action = "{{url_for('text')}}" class = "form-inline" method = "post">
-      <input type = "text" class = "form-control" placeholder = "" name = "title" value = "{{request.form.title}}">
+      <input type = "text" class = "form-control" placeholder = "Story Title" name = "title" value = "{{request.form.title}}">
+      <p></p>
       <textarea  type ="text" class ="form-control" placeholder ="Paragragh One" name ="StoryPara" rows = "3"></textarea>
+      <p></p>
       <textarea type ="text" class ="form-control" placeholder ="Paragragh Two" name ="StoryParaTwo" rows = "3" value = "{{request.form.para_two}}"></textarea>
+      <p></p>
       <textarea type ="text" class ="form-control" placeholder ="Paragragh Three" name ="StoryParaThree" rows = "3" value = "{{request.form.para_three}}"></textarea>
+      <p></p>
       <textarea type ="text" class ="form-control" placeholder ="Paragragh Four" name ="StoryParaFour" rows = "3" value = "{{request.form.para_Four}}"></textarea>
+      <p></p>
       <input type="text" class="form-control" placeholder="Quote" name="Quote" value = "{{request.form.quote}}">
+      <p></p>
       <input type=file name="photos">
+      <p></p>
       <input class = "btn btn-default" type = "submit" value = "Submit Story">
+      <p></p>
     <a href="/admin" class="btn btn-secondary" role="button">Back to admin home</a>
   </fieldset>
 </form>
