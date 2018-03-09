@@ -105,3 +105,7 @@ padding: 20px;
   transform: translate3d(0,0,0);
 }
 .social-icon {display: inline-block; margin: 0 10px}
+
+.text-center {
+  text-align: center;
+}
