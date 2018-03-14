@@ -17,7 +17,12 @@
     background-position : center center;
     background-repeat:no-repeat;
 }
-
+.footerfffff{
+  position: absolute;
+  bottom: 0;
+  width 100%;
+  height: 60%;
+}
 .mybutton:before{
      background-image : url(https://www.iconfinder.com/icons/2878029/media_network_photo_social_video_web_icon#size=256);
 }
@@ -41,7 +46,7 @@ padding: 20px;
   height: 80%;
   left: 10%;
   top: 10%;
-  border-bottom: 1px solid #FFF;
+  border-bottom: 1px solid;
   border-top: 1px solid #FFF;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
@@ -58,17 +63,15 @@ padding: 20px;
   transform: scale(1);
 }
 
-.hovereffect img {
-  display: block;
-  position: relative;
-  -webkit-transition: all 0.35s;
-  transition: all 0.35s;
-}
 
 .hovereffect:hover img {
   filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.6" /><feFuncG type="linear" slope="0.6" /><feFuncB type="linear" slope="0.6" /></feComponentTransfer></filter></svg>#filter');
   filter: brightness(0.6);
   -webkit-filter: brightness(0.6);
+  display: block;
+  position: relative;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
 }
 
 .hovereffect h2 {
