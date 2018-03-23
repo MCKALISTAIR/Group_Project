@@ -8,7 +8,6 @@ app.secret_key = 'qGseyftsYb9rdYIIfz2cXjhJT9ZJwIxI8Pr0YvUd'
 
 @app.route("/", methods=['POST','GET'])
 def main():
-    flash("Hello, I'm a flash!")
     return render_template('main.html')
 
 @app.route("/textupload", methods=['POST','GET'])

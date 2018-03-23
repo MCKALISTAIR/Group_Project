@@ -1,5 +1,16 @@
 <html>
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115870719-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-115870719-1');
+</script>
+
+
   <title>Napier Placement Stories</title>
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -40,15 +51,18 @@
 <body>
   <!doctype html>
   <title>Placement webiste</title>
-  {% with messages = get_flashed_messages() %}
-    {% if messages %}
-      <ul class=flashes>
-      {% for message in messages %}
-        <li>{{ message }}</li>
-      {% endfor %}
-      </ul>
-    {% endif %}
-  {% endwith %}
+  <div class="container" align="center"> <!-- style="min-height:100%" -->
+   {% with messages = get_flashed_messages() %}
+     {% if messages %}
+       {% for message in messages %}
+         <div class="alert alert-warning alert-dismissible" role="alert">
+           <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+           {{message}}
+         </div>
+       {% endfor %}
+     {% endif %}
+   {% endwith %}
+ </div>
 
 
 {% block body %}

@@ -5536,11 +5536,7 @@ button.close {
 .modal-footer > :not(:last-child) {
   margin-right: .25rem;
 }
-.footer{
-  position: absolute;
-  bottom: 0;
-  width 100%;
-  height: 60%;
+
 }
 .modal-scrollbar-measure {
   position: absolute;
