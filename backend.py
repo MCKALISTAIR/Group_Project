@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import json
 from flask import Flask, flash, session, render_template, url_for, request, session, redirect, abort
+from flask.ext.uploads import UploadSet, configure_uploads, IMAGES
 #from flask_pymongo import PyMongo
 # import bcrypt
 app = Flask(__name__)
@@ -28,7 +29,12 @@ def text():
     except Exception as e:
         print(e)
     return render_template('textupload.html')
-
+@app.route('/upload', methods=['GET', 'POST'])
+def upload():
+    if request.method == 'POST' and 'photo' in request.files:
+        filename = photos.save(request.files['photo'])
+        return filename
+    return render_template('upload.html')
 @app.route("/admin", methods=['POST','GET'])
 def admin():
     if session.get('status', None) != "admin":
