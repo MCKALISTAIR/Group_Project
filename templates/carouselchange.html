@@ -4,39 +4,41 @@
 {% if session.get('status', None) != "admin": %}
       return redirect(url_for('403'))
 {% endif %}
-<body>
-<div class="container">
-<h3>Change carousel images</h3>
-<p>This page is used to change the images on the main page carousel</p>
-<p>Full upload instructions can be found <span><a class="btn btn-link" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-here</a>
-  <div class="collapse" id="collapseExample">
-    <div class="well">
-Life's like a road that you travel on
-When there's one day here and the next day gone
-Sometimes you bend and sometimes you stand
-Sometimes you turn your back to the wind
-There's a world outside every darkened door
-Where blues won't haunt you anymore
-Where brave are free and lovers soar
-Come ride with me to the distant shore
-    </div>
-  </div>
- <span>
-</p>
+<script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+<script src="jquery.innerfade.js" type="text/javascript"></script>
+    <script>
+            $(document).ready(function() {
+                $('#image_rotate').innerfade({
+                    speed: 'slow',
+                    timeout: 2000,
+                    type: 'sequence',
+                    containerheight: '220px'
+                });
+            });
+        </script>
+        <ul id="image_rotate" style="list-style: none;">
+            <?= $image_rotation; ?>
+        </ul>
 
-<form method="post">
-  <fieldset>
-    <input type='file' accept="image/*"/>
-    <img id="myImg" src="#" alt="your image" />
-    <div class"form-group">
-      <input class="form-control" type="text" name="url" data-original-title="Tooltip" placeholder="URL to link image to">
-    </div>
-    <button class="btn btn-primary" value="submit">Submit</button>
-    <button class="btn btn-secondary" value="submit">Clear</button>
-    <a href="/admin" class="btn btn-secondary" role="button">Back to admin home</a>
-  </fieldset>
-</form>
-</div>
-</body>
+        <?
+       // Global Variables
+       $image_dir = "$_SERVER[DOCUMENT_ROOT]/bdexchange/assets/slide"; // directory on server
+       $image_relative_path = 'static/img'; // path to images relative to script
+       $file_types = array('jpg', 'jpeg', 'gif', 'png');
+       $image_time = '4000'; // seconds each image will display (4000 = 4 seconds)
+       $image_rotation ='';
+       if ($handle = opendir($image_dir)) {
+           while (false !== ($file = readdir($handle))) {
+               if ($file != "." && $file != "..") {
+                   $ext_bits = explode(".", $file); // finds file extensions
+                   foreach ($ext_bits as $key => $value) {
+                       if (in_array($value, $file_types)) {
+                           $image_rotation .= '<li><img src="' .base_url().$image_relative_path . '/' . $file . '"></li>';
+                       }
+                   }
+               }
+           }
+           closedir($handle);
+       }
+       ?>
 {% endblock %}
