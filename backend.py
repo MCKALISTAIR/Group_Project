@@ -10,6 +10,9 @@ app.secret_key = 'qGseyftsYb9rdYIIfz2cXjhJT9ZJwIxI8Pr0YvUd'
 @app.route("/", methods=['POST','GET'])
 def main():
     return render_template('main.html')
+@app.route("/test")
+def phptest():
+    return render_template('test.php')
 
 @app.route("/textupload", methods=['POST','GET'])
 def text():
@@ -34,7 +37,7 @@ def upload():
     if request.method == 'POST' and 'photo' in request.files:
         filename = photos.save(request.files['photo'])
         return filename
-    return render_template('upload.html')
+    return render_template('upload.php')
 @app.route("/admin", methods=['POST','GET'])
 def admin():
     if session.get('status', None) != "admin":
