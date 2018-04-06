@@ -1,19 +1,43 @@
 # -*- coding: utf-8 -*-
 import json
 from flask import Flask, flash, session, render_template, url_for, request, session, redirect, abort
-from flask.ext.uploads import UploadSet, configure_uploads, IMAGES
+#from flask.ext.uploads import UploadSet, configure_uploads, IMAGES
+#from flask_mail import Mail, Message
 #from flask_pymongo import PyMongo
 # import bcrypt
 app = Flask(__name__)
-app.secret_key = 'qGseyftsYb9rdYIIfz2cXjhJT9ZJwIxI8Pr0YvUd'
 
+app.secret_key = 'qGseyftsYb9rdYIIfz2cXjhJT9ZJwIxI8Pr0YvUd'
+#app.config.update(
+
+	#EMAIL SETTINGS
+#	MAIL_SERVER='smtp.gmail.com',
+#	MAIL_PORT=465,
+#	MAIL_USE_SSL=True,
+#	MAIL_USERNAME = 'napierplacementnoreply@gmail.com',
+	#MAIL_PASSWORD = 'Placement5000'
+#	)
+#mail = Mail(app)
+#app.config['MAIL_DEFAULT_SENDER'] = ‘allymckay5@gmail.com’
 @app.route("/", methods=['POST','GET'])
 def main():
     return render_template('main.html')
 @app.route("/test")
 def phptest():
-    return render_template('test.php')
-
+    return render_template('test.html')
+@app.route('/sendmail/', methods=['POST','GET'])
+def send_mail():
+		#try:
+			#emaiil = request.form['email']
+		#	msg = Message("Placement site access request",
+		#	  sender="placmentnoreply@gmail.com",
+		#	  recipients=["allymckay5@gmail.com"])
+		#	msg.body = "Hello! This is an automated message to say that"
+		#	mail.send(msg)
+			#flash('Request sent!')
+	return redirect(url_for('main'))
+	#	except Exception, e:
+		#	return(str(e))
 @app.route("/textupload", methods=['POST','GET'])
 def text():
     try:
@@ -51,6 +75,18 @@ def analyticstestpage():
         abort(403)
     else:
         return render_template('analyticstestpage.html')
+@app.route("/analyticstestpage2", methods=['POST','GET'])
+def analyticstestpage2():
+    if session.get('status', None) != "admin":
+        abort(403)
+    else:
+        return render_template('analyticstestpage2.html')
+@app.route("/analyticstestpage3", methods=['POST','GET'])
+def analyticstestpage3():
+    if session.get('status', None) != "admin":
+        abort(403)
+    else:
+        return render_template('analyticstestpage3.html')
 
 @app.route("/uploadinstructions", methods=['POST','GET'])
 def uploadinstructions():
