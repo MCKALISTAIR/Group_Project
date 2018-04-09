@@ -91,10 +91,10 @@
       <div class="modal-body">
         <h2>Hello</h2>
         <p>Please Enter Password Below</p>
-        <p data-toggle="modal" data-target="#exampleModal2">Access can be requested here</p>
+        <p data-toggle="modal" data-target="#exampleModal2" data-dismiss="modal">Cick me to request access</p>
        <form action="{% print url_for('login') %}" class ="form-inline" method="post">
           <input type = "password" class = "form-control" placeholder="Password" name = "passwd">
-          <input class ="btn btn-default" type = "submit" value = login>
+          <input class ="btn btn-default" type = "submit" value = Login>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </form>
       </div>
@@ -107,11 +107,12 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModal2Label">Access request form</h5>
-        <button type="button" class="close" data-dismiss="modal2 modal" aria-label="Close">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
+        <p>Enter email below to request access</p>
         <form action="{% print url_for('Send') %}" class ="form-inline" method="post">
           <input type = "email" class = "form-control" placeholder="Email" name = "email">
           <input class ="btn btn-default" type = "submit" value = Send>
