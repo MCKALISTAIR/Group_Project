@@ -1,23 +1,26 @@
 # -*- coding: utf-8 -*-
 import json
 from flask import Flask, flash, session, render_template, url_for, request, session, redirect, abort
-#from flask.ext.uploads import UploadSet, configure_uploads, IMAGES
-#from flask_mail import Mail, Message
+from flask.ext.uploads import UploadSet, configure_uploads, IMAGES
+from flask_mail import Mail, Message
 #from flask_pymongo import PyMongo
 # import bcrypt
 app = Flask(__name__)
+photos = UploadSet('photos', IMAGES)
 
+app.config['UPLOADED_PHOTOS_DEST'] = 'static/img'
+configure_uploads(app, photos)
 app.secret_key = 'qGseyftsYb9rdYIIfz2cXjhJT9ZJwIxI8Pr0YvUd'
-#app.config.update(
-
+app.config.update(
+	DEBUG=True,
 	#EMAIL SETTINGS
-#	MAIL_SERVER='smtp.gmail.com',
-#	MAIL_PORT=465,
-#	MAIL_USE_SSL=True,
-#	MAIL_USERNAME = 'napierplacementnoreply@gmail.com',
-	#MAIL_PASSWORD = 'Placement5000'
-#	)
-#mail = Mail(app)
+	MAIL_SERVER='smtp.gmail.com',
+	MAIL_PORT=465,
+	MAIL_USE_SSL=True,
+	MAIL_USERNAME = 'napierplacementnoreply@gmail.com',
+	MAIL_PASSWORD = 'Placement5000'
+	)
+mail = Mail(app)
 #app.config['MAIL_DEFAULT_SENDER'] = ‘allymckay5@gmail.com’
 @app.route("/", methods=['POST','GET'])
 def main():
@@ -25,19 +28,21 @@ def main():
 @app.route("/test")
 def phptest():
     return render_template('test.html')
-@app.route('/sendmail/', methods=['POST','GET'])
-def send_mail():
-		#try:
-			#emaiil = request.form['email']
-		#	msg = Message("Placement site access request",
-		#	  sender="placmentnoreply@gmail.com",
-		#	  recipients=["allymckay5@gmail.com"])
-		#	msg.body = "Hello! This is an automated message to say that"
-		#	mail.send(msg)
-			#flash('Request sent!')
-	return redirect(url_for('main'))
-	#	except Exception, e:
-		#	return(str(e))
+
+@app.route('/Send/', methods=['POST','GET'])
+def Send():
+		try:
+			#emaiil = request.form['email'] + request.form['email']
+			msg = Message("Placement site access request",
+			  sender="placmentnoreply@gmail.com",
+			  recipients=["allymckay5@gmail.com"])
+			msg.body = "Hello! This is an automated message to say that" + request.form['email'] + " has requested access to PLACEHOLDER. Please do not reply to this message, the mailbox is not monitored."
+			mail.send(msg)
+			flash('Request sent!')
+			return redirect(url_for('main'))
+		except Exception, e:
+			return(str(e))
+
 @app.route("/textupload", methods=['POST','GET'])
 def text():
     try:
@@ -61,7 +66,7 @@ def upload():
     if request.method == 'POST' and 'photo' in request.files:
         filename = photos.save(request.files['photo'])
         return filename
-    return render_template('upload.php')
+    return render_template('upload.html')
 @app.route("/admin", methods=['POST','GET'])
 def admin():
     if session.get('status', None) != "admin":
