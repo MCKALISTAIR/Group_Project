@@ -62,7 +62,7 @@ def Send():
 			msg = Message("Placement site access request",
 			  sender="placmentnoreply@gmail.com",
 			  recipients=["allymckay5@gmail.com"])
-			msg.body = "Hello! This is an automated message to say that" + request.form['email'] + " has requested access to PLACEHOLDER. Please do not reply to this message, the mailbox is not monitored."
+			msg.body = "Hello! This is an automated message to say that " + request.form['email'] + " has requested access to PLACEHOLDER. Please do not reply to this message, the mailbox is not monitored."
 			mail.send(msg)
 			flash('Request sent!')
 			return redirect(url_for('main'))
