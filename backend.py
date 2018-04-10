@@ -142,15 +142,3 @@ def internal_error(error):
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
-
-# '''def readFile(file, title):
-#     try:
-#         with open(file, 'r') as filepath:
-#             print('jjgjg')
-#             data = json.load(filepath)
-#             for r in data:
-#                 if r['title'] == title:
-#                     print(r['title'])
-#                     print('loool')
-#     except Exception as e:
-#         return render_template('admin.html')'''
