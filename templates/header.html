@@ -37,12 +37,20 @@
 <!-- Creates the banner!-->
 <header>
   <a href="/">
-    <h1>Enhanced Placement Stories</h1>
+    <img src="/static/images/headerPlaceHolder.png">
   </a>
 </header>
 
 {% if session.get('status', None) == "admin": %}
-    <h3>Logged in as Admin</h3>
+<div class="row">
+  <div class=col>
+  </div>
+  <div class=col>
+    <h4 style="text-align:center; background-color:#a2fba2; background-border:solid;">Admin Logged In</h4>
+  </div>
+  <div class=col>
+  </div>
+</div>
 {% endif %}
 
 {% if session.get('status', None) == "User": %}

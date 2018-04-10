@@ -1,46 +1,66 @@
 # -*- coding: utf-8 -*-
-import json
-from flask import Flask, flash, session, render_template, url_for, request, session, redirect, abort
-from flask.ext.uploads import UploadSet, configure_uploads, IMAGES
+from flask import Flask, flash, session, render_template, url_for, request, session, redirect, abort, json
+from werkzeug.utils import secure_filename
+import os
+# from flask.ext.uploads import UploadSet, configure_uploads, IMAGES
 #from flask_pymongo import PyMongo
 # import bcrypt
+
+UPLOAD_FOLDER = 'static/testimage'
+ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
+
 app = Flask(__name__)
+
 app.secret_key = 'qGseyftsYb9rdYIIfz2cXjhJT9ZJwIxI8Pr0YvUd'
+
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+def storyTime(form, filename):
+    storyTime= {}
+    storyTime["Title"] = form["Title"]
+    storyTime["ParaOne"] = form["StoryPara"]
+    storyTime["ParaTwo"] = form["StoryParaTwo"]
+    storyTime["ParaThree"] = form["StoryParaThree"]
+    storyTime["ParaFour"] = form["StoryParaFour"]
+    storyTime["Quote"] = form["Quote"]
+    storyTime["filename"] = form["filename"]
+    return storyTime
+
+with open('newstories.json') as in_file:
+    data = json.load(in_file)
+    in_file.close()
 
 @app.route("/", methods=['POST','GET'])
 def main():
-    return render_template('main.html')
+    return render_template('main.html', data=data)
 
-@app.route("/textupload", methods=['POST','GET'])
+@app.route("/textupload", methods=['GET','POST'])
 def text():
-    try:
-        if request.method == "POST":
-            file = 'stories.json'
-            '''stories['para1'] = request.form['StoryPara']
-            stories['para2'] = request.form['StoryParaTwo']
-            stories['para3'] = request.form['StoryParaThree']
-            stories['para4'] = request.form['StoryParaFour']
-            stories['quote'] = request.form['Quote']
+    if request.method == "POST" and "filename" in request.files:
+        file = request.files['filename']
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+    if request.method == "POST" and "Title" in request.form:
+        data[request.form["Title"]] = storyTime(request.form, filename)
+        with open('newstories.json', 'w') as outfile:
+            json.dump(data, outfile)
+        flash("Your Story Has Been Posted!")
+        return render_template("main.html", data=data, filename=filename)
+    return render_template("textupload.html", data=data)
 
-            with open(file, 'a') as f:
-                json.dump(stories, f)'''
-            with open(file, 'r') as f:
-                data = json.load(f)
-    except Exception as e:
-        print(e)
-    return render_template('textupload.html')
-@app.route('/upload', methods=['GET', 'POST'])
-def upload():
-    if request.method == 'POST' and 'photo' in request.files:
-        filename = photos.save(request.files['photo'])
-        return filename
-    return render_template('upload.html')
+
 @app.route("/admin", methods=['POST','GET'])
 def admin():
     if session.get('status', None) != "admin":
         abort(403)
     else:
         return render_template('admin.html')
+
 
 @app.route("/analyticstestpage", methods=['POST','GET'])
 def analyticstestpage():
@@ -74,10 +94,9 @@ def videoinstructions():
     else:
         return render_template('videoinstructions.html')
 
-@app.route("/story", methods=['POST','GET'])
-def story():
-    return render_template('storytemp.html')
-
+@app.route("/<storyTime>/", methods=['POST','GET'])
+def story(storyTime):
+    return render_template('storytemp.html', data=data, storyTime=storyTime)
 
 @app.route('/logout')
 def logout():
@@ -98,19 +117,20 @@ def login():
             if request.form['passwd'] == "password":
                 session['user'] = "Admin"
                 session['status'] = "admin"
-
                 return redirect(url_for('admin'))
-
             else:
                 flash('Wrong password fool')
                 return redirect(url_for('main'))
     else:
         return render_template('admin.html')
 
-
 @app.errorhandler(403)
 def page_not_found(error4):
     return render_template('403.html'), 403
+
+@app.errorhandler(400)
+def page_not_found(error4):
+    return render_template('403.html'), 400
 
 @app.errorhandler(404)
 def page_not_found(e):
@@ -123,14 +143,14 @@ def internal_error(error):
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
 
-'''def readFile(file, title):
-    try:
-        with open(file, 'r') as filepath:
-            print('jjgjg')
-            data = json.load(filepath)
-            for r in data:
-                if r['title'] == title:
-                    print(r['title'])
-                    print('loool')
-    except Exception as e:
-        return render_template('admin.html')'''
+# '''def readFile(file, title):
+#     try:
+#         with open(file, 'r') as filepath:
+#             print('jjgjg')
+#             data = json.load(filepath)
+#             for r in data:
+#                 if r['title'] == title:
+#                     print(r['title'])
+#                     print('loool')
+#     except Exception as e:
+#         return render_template('admin.html')'''
