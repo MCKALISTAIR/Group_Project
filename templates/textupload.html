@@ -5,26 +5,26 @@
 
 <div class="container">
 <h3>Upload a Story!</h3>
-<form method="post">
+<form method=post enctype=multipart/form-data>
   <fieldset>
-    <form action = "{{url_for('text')}}" class = "form-inline" method = "post">
-      <input type = "text" class = "form-control" placeholder = "Story Title" name = "title" value = "{{request.form.title}}">
+    <form class = "form-inline">
+      <input type = "text" class = "form-control" placeholder = "Story Title" name = "Title">
       <p></p>
       <textarea  type ="text" class ="form-control" placeholder ="Paragragh One" name ="StoryPara" rows = "3"></textarea>
       <p></p>
-      <textarea type ="text" class ="form-control" placeholder ="Paragragh Two" name ="StoryParaTwo" rows = "3" value = "{{request.form.para_two}}"></textarea>
+      <textarea type ="text" class ="form-control" placeholder ="Paragragh Two" name ="StoryParaTwo" rows = "3"></textarea>
       <p></p>
-      <textarea type ="text" class ="form-control" placeholder ="Paragragh Three" name ="StoryParaThree" rows = "3" value = "{{request.form.para_three}}"></textarea>
+      <textarea type ="text" class ="form-control" placeholder ="Paragragh Three" name ="StoryParaThree" rows = "3"></textarea>
       <p></p>
-      <textarea type ="text" class ="form-control" placeholder ="Paragragh Four" name ="StoryParaFour" rows = "3" value = "{{request.form.para_Four}}"></textarea>
+      <textarea type ="text" class ="form-control" placeholder ="Paragragh Four" name ="StoryParaFour" rows = "3"></textarea>
       <p></p>
-      <input type="text" class="form-control" placeholder="Quote" name="Quote" value = "{{request.form.quote}}">
+      <input type="text" class="form-control" placeholder="Quote" name="Quote">
       <p></p>
-      <input type=file name="photos">
+      <input type=file name=filename multiple>
       <p></p>
-      <input class = "btn btn-default" type = "submit" value = "Submit Story">
+      <input class="btn btn-default" type="Submit" value="Submit">
       <p></p>
-    <a href="/admin" class="btn btn-secondary" role="button">Back to admin home</a>
+    <a href="/admin" class="btn btn-secondary" role="button">Back To Admin Home</a>
   </fieldset>
 </form>
 </div>

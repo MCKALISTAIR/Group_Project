@@ -5,12 +5,14 @@
   {% if session.get('status', None) == "admin": %}
   <button type="button" class="btn float-right btn-secondary">Enter edit mode</button>
   {% endif %}
-  <h1>Title</h1>
-  <h2>Tagline</h2>
-  <p>PARA 1</p>
-  <p>PARA2</p>
-  <p>PARA3</p>
-  <p>PARA4</p>
-  <h3>Quote</h3>
+  <div class="container">
+    <h1 style="text-align:center;">{{ data[storyTime]["Title"] }}</h1>
+    <img src="/static/testimage/{% print(data[storyTime]['filename[0]']) %}" style="height:350px; width:500px;  border-radius: 5%;">
+    <p>{{ data[storyTime]["ParaOne"] }}</p>
+    <p>{{ data[storyTime]["ParaTwo"] }}</p>
+    <p>{{ data[storyTime]["ParaThree"] }}</p>
+    <p>{{ data[storyTime]["ParaFour"] }}</p>
+    <p>"{{ data[storyTime]["Quote"] }}"</p>
+  </div>
 </body>
 {% endblock %}
