@@ -38,59 +38,20 @@
   <img src="static/b6.png" class="img-responsive rounded" width="100%" height="45%">
 </a>
 <h3>Top Stories From The School of Computing</h3>
-<!-- This container holds the top row of images (School Of Computing)!-->
 <div class="row">
-  <div class="col-6 col-sm-3">
-    <div class="pdf-thumb-box"> <a href="/g">
-            <div class="pdf-thumb-box-overlay">
-              <span class="fa-stack fa-lg">
-                <h2>Story name</h2>
-                <p>Short description</p>
-                <i class="fa fa-square-o fa-stack-2x pdf-thumb-square"></i>
-                <i class="fa fa-eye fa-stack-1x pdf-thumb-eye"></i>
-              </span>
-            </div>
-            <img class="img-responsive rounded" src="src/css/article.jpg" alt="f">
-        </a>
-    </div>
-    <div class="vertical-social-box"></div>
+  {% for d in data %}
+  <div class="col" style="margin-right:2.5%; margin-left:2.5%;">
+    <a href="/{% print(data[d]['Title']) %}/">
+      <img src="/static/testimage/{% print(data[d]['filename'][0]) %}" style="width:250px; height:250px;">
+    </a>
   </div>
-
-  </div>
-  <div class="col-6 col-sm-3">
-    <!-- <div class="hovereffect"> -->
-      <img src="static/article.jpg" class="rounded" style="margin: auto; display: block;">
-        <!-- <div class="overlay">
-          <h2>And Violet</h2>
-          <p>
-            <a href="#">Mabey short description?</a>
-          </p>
-        </div>
-    </div> -->
-  </div>
-  <div class="col-6 col-sm-3">
-    <!-- <div class="hovereffect"> -->
-      <img src="static/article.jpg" class="rounded" style="margin: auto; display: block;">
-        <!-- <div class="overlay">
-          <h2>And Violet</h2>
-          <p>
-            <a href="#">Mabey short description?</a>
-          </p>
-        </div>
-    </div> -->
-  </div>
-  <div class="col-6 col-sm-3">
-    <!-- <div class="hovereffect"> -->
-      <img src="static/article.jpg" class="rounded" style="margin: auto; display: block;">
-        <!-- <div class="overlay">
-          <h2>And Violet</h2>
-          <p>
-            <a href="#">Mabey short description?</a>
-          </p>
-        </div>
-    </div> -->
-  </div>
+  {% endfor %}
 </div>
+  <a href="/morestories">
+    <img src="static/engBanner.png" class="img-responsive rounded" width="100%" height="45%">
+  </a>
+  <h3>Top Stories From The School of Engineering & The Built Envionment</h3>
+
 <script type="text/javascript" id="cookieinfo"
 	src="//cookieinfoscript.com/js/cookieinfo.min.js">
 </script>

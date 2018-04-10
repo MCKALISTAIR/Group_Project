@@ -8,9 +8,35 @@ from flask_mail import Mail, Message
 app = Flask(__name__)
 photos = UploadSet('photos', IMAGES)
 
+UPLOAD_FOLDER = 'static/testimage'
+ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
+
 app.config['UPLOADED_PHOTOS_DEST'] = 'static/img'
 configure_uploads(app, photos)
 app.secret_key = 'qGseyftsYb9rdYIIfz2cXjhJT9ZJwIxI8Pr0YvUd'
+
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+def storyTime(form, filename):
+    storyTime= {}
+    storyTime["Title"] = form["Title"]
+    storyTime["ParaOne"] = form["StoryPara"]
+    storyTime["ParaTwo"] = form["StoryParaTwo"]
+    storyTime["ParaThree"] = form["StoryParaThree"]
+    storyTime["ParaFour"] = form["StoryParaFour"]
+    storyTime["Quote"] = form["Quote"]
+    storyTime["filename"] = form["filename"]
+    return storyTime
+
+with open('newstories.json') as in_file:
+    data = json.load(in_file)
+    in_file.close()
+
+
 app.config.update(
 	DEBUG=True,
 	#EMAIL SETTINGS
@@ -36,7 +62,7 @@ def Send():
 			msg = Message("Placement site access request",
 			  sender="placmentnoreply@gmail.com",
 			  recipients=["allymckay5@gmail.com"])
-			msg.body = "Hello! This is an automated message to say that" + request.form['email'] + " has requested access to PLACEHOLDER. Please do not reply to this message, the mailbox is not monitored."
+			msg.body = "Hello! This is an automated message to say that " + request.form['email'] + " has requested access to PLACEHOLDER. Please do not reply to this message, the mailbox is not monitored."
 			mail.send(msg)
 			flash('Request sent!')
 			return redirect(url_for('main'))
@@ -45,23 +71,19 @@ def Send():
 
 @app.route("/textupload", methods=['POST','GET'])
 def text():
-    try:
-        if request.method == "POST":
-            file = 'stories.json'
-            '''stories['para1'] = request.form['StoryPara']
-            stories['para2'] = request.form['StoryParaTwo']
-            stories['para3'] = request.form['StoryParaThree']
-            stories['para4'] = request.form['StoryParaFour']
-            stories['quote'] = request.form['Quote']
+    if request.method == "POST" and "filename" in request.files:
+        file = request.files['filename']
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+    if request.method == "POST" and "Title" in request.form:
+        data[request.form["Title"]] = storyTime(request.form, filename)
+        with open('newstories.json', 'w') as outfile:
+            json.dump(data, outfile)
+        flash("Your Story Has Been Posted!")
+        return render_template("main.html", data=data, filename=filename)
+    return render_template("textupload.html", data=data)
 
-            with open(file, 'a') as f:
-                json.dump(stories, f)'''
-            with open(file, 'r') as f:
-                data = json.load(f)
-    except Exception as e:
-        print(e)
-    return render_template('textupload.html')
-@app.route('/upload', methods=['GET', 'POST'])
 def upload():
     if request.method == 'POST' and 'photo' in request.files:
         filename = photos.save(request.files['photo'])
@@ -166,15 +188,3 @@ def internal_error(error):
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
-
-'''def readFile(file, title):
-    try:
-        with open(file, 'r') as filepath:
-            print('jjgjg')
-            data = json.load(filepath)
-            for r in data:
-                if r['title'] == title:
-                    print(r['title'])
-                    print('loool')
-    except Exception as e:
-        return render_template('admin.html')'''
