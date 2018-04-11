@@ -42,7 +42,7 @@
   {% for d in data %}
   <div class="col" style="margin-right:2.5%; margin-left:2.5%;">
     <a href="/{% print(data[d]['Title']) %}/">
-      <img src="/static/testimage/{% print(data[d]['filename'][0]) %}" style="width:250px; height:250px;">
+      <img src="/static/testimage/{% print(data[d]['zipFolder']) %}" style="width:250px; height:250px;">
     </a>
   </div>
   {% endfor %}
