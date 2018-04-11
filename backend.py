@@ -30,6 +30,7 @@ def storyTime(form, zipFolder):
     storyTime["ParaThree"] = form["StoryParaThree"]
     storyTime["ParaFour"] = form["StoryParaFour"]
     storyTime["Quote"] = form["Quote"]
+    storyTime["schoolSelect"] = form["schoolSelect"]
     storyTime["zipFolder"] = zipFolder
     return storyTime
 
