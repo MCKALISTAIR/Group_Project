@@ -1,18 +1,19 @@
 # -*- coding: utf-8 -*-
 import json
 from flask import Flask, flash, session, render_template, url_for, request, session, redirect, abort
-from flask.ext.uploads import UploadSet, configure_uploads, IMAGES
-from flask_mail import Mail, Message
+import os
+# from flask.ext.uploads import UploadSet, configure_uploads, IMAGES
+# from flask_mail import Mail, Message
 #from flask_pymongo import PyMongo
 # import bcrypt
 app = Flask(__name__)
-photos = UploadSet('photos', IMAGES)
+# photos = UploadSet('photos', IMAGES)
 
 UPLOAD_FOLDER = 'static/testimage'
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
-app.config['UPLOADED_PHOTOS_DEST'] = 'static/img'
-configure_uploads(app, photos)
+# app.config['UPLOADED_PHOTOS_DEST'] = 'static/img'
+# configure_uploads(app, photos)
 app.secret_key = 'qGseyftsYb9rdYIIfz2cXjhJT9ZJwIxI8Pr0YvUd'
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -21,7 +22,7 @@ def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-def storyTime(form, filename):
+def storyTime(form, zipFolder):
     storyTime= {}
     storyTime["Title"] = form["Title"]
     storyTime["ParaOne"] = form["StoryPara"]
@@ -36,38 +37,36 @@ with open('newstories.json') as in_file:
     data = json.load(in_file)
     in_file.close()
 
-
-app.config.update(
-	DEBUG=True,
-	#EMAIL SETTINGS
-	MAIL_SERVER='smtp.gmail.com',
-	MAIL_PORT=465,
-	MAIL_USE_SSL=True,
-	MAIL_USERNAME = 'napierplacementnoreply@gmail.com',
-	MAIL_PASSWORD = 'Placement5000'
-	)
-mail = Mail(app)
+# app.config.update(
+# 	#EMAIL SETTINGS
+# 	MAIL_SERVER='smtp.gmail.com',
+# 	MAIL_PORT=465,
+# 	MAIL_USE_SSL=True,
+# 	MAIL_USERNAME = 'napierplacementnoreply@gmail.com',
+# 	MAIL_PASSWORD = 'Placement5000'
+# 	)
+# mail = Mail(app)
 #app.config['MAIL_DEFAULT_SENDER'] = ‘allymckay5@gmail.com’
 @app.route("/", methods=['POST','GET'])
 def main():
-    return render_template('main.html' data=data)
-@app.route("/test")
-def phptest():
-    return render_template('test.html')
-
-@app.route('/Send/', methods=['POST','GET'])
-def Send():
-		try:
-			#emaiil = request.form['email'] + request.form['email']
-			msg = Message("Placement site access request",
-			  sender="placmentnoreply@gmail.com",
-			  recipients=["allymckay5@gmail.com"])
-			msg.body = "Hello! This is an automated message to say that " + request.form['email'] + " has requested access to PLACEHOLDER. Please do not reply to this message, the mailbox is not monitored."
-			mail.send(msg)
-			flash('Request sent!')
-			return redirect(url_for('main'))
-		except Exception, e:
-			return(str(e))
+    return render_template('main.html', data=data)
+# @app.route("/test")
+# def phptest():
+#     return render_template('test.html')
+#
+# @app.route('/Send/', methods=['POST','GET'])
+# def Send():
+# 		try:
+# 			#emaiil = request.form['email'] + request.form['email']
+# 			msg = Message("Placement site access request",
+# 			  sender="placmentnoreply@gmail.com",
+# 			  recipients=["allymckay5@gmail.com"])
+# 			msg.body = "Hello! This is an automated message to say that " + request.form['email'] + " has requested access to PLACEHOLDER. Please do not reply to this message, the mailbox is not monitored."
+# 			mail.send(msg)
+# 			flash('Request sent!')
+# 			return redirect(url_for('main'))
+# 		except Exception, e:
+# 			return(str(e))
 
 @app.route("/textupload", methods=['POST','GET'])
 def text():
@@ -89,6 +88,7 @@ def upload():
         filename = photos.save(request.files['photo'])
         return filename
     return render_template('upload.html')
+
 @app.route("/admin", methods=['POST','GET'])
 def admin():
     if session.get('status', None) != "admin":
@@ -102,12 +102,14 @@ def analyticstestpage():
         abort(403)
     else:
         return render_template('analyticstestpage.html')
+
 @app.route("/analyticstestpage2", methods=['POST','GET'])
 def analyticstestpage2():
     if session.get('status', None) != "admin":
         abort(403)
     else:
         return render_template('analyticstestpage2.html')
+
 @app.route("/analyticstestpage3", methods=['POST','GET'])
 def analyticstestpage3():
     if session.get('status', None) != "admin":
@@ -140,11 +142,6 @@ def videoinstructions():
     else:
         return render_template('videoinstructions.html')
 
-@app.route("/story", methods=['POST','GET'])
-def story():
-    return render_template('storytemp.html')
-
-
 @app.route('/logout')
 def logout():
     session['user'] = ""
@@ -173,6 +170,9 @@ def login():
     else:
         return render_template('admin.html')
 
+@app.route("/<storyTime>/", methods=['POST','GET'])
+def story(storyTime):
+    return render_template('storytemp.html', data=data, storyTime=storyTime)
 
 @app.errorhandler(403)
 def page_not_found(error4):
