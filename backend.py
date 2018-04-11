@@ -29,7 +29,7 @@ def storyTime(form, filename):
     storyTime["ParaThree"] = form["StoryParaThree"]
     storyTime["ParaFour"] = form["StoryParaFour"]
     storyTime["Quote"] = form["Quote"]
-    storyTime["filename"] = form["filename"]
+    storyTime["zipFolder"] = zipFolder
     return storyTime
 
 with open('newstories.json') as in_file:
@@ -71,17 +71,17 @@ def Send():
 
 @app.route("/textupload", methods=['POST','GET'])
 def text():
-    if request.method == "POST" and "filename" in request.files:
-        file = request.files['filename']
-        if file and allowed_file(file.filename):
-            filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+    if request.method == "POST" and "zipFolder" in request.files:
+        f = request.files.getlist('zipFolder')
+        for zipFile in f:
+            filename = zipFile.filename.split('/')[0]
+            zipFile.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
     if request.method == "POST" and "Title" in request.form:
         data[request.form["Title"]] = storyTime(request.form, filename)
         with open('newstories.json', 'w') as outfile:
             json.dump(data, outfile)
         flash("Your Story Has Been Posted!")
-        return render_template("main.html", data=data, filename=filename)
+        return render_template("main.html", data=data, zipFile=zipFile)
     return render_template("textupload.html", data=data)
 
 def upload():
