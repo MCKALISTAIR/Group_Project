@@ -1,0 +1,17 @@
+{% extends "header.html" %}
+
+{% block body %}
+<body>
+  {% if session.get('status', None) == "admin": %}
+  <button type="button" class="btn float-right btn-secondary">Enter edit mode</button>
+  {% endif %}
+  <div class="container">
+    <h1 style="text-align:center;">{{ viddata[videoTime]["videoTitle"] }}</h1>
+    <p>{{ viddata[videoTime]["videoSchoolSelect"] }}</p>
+    <img src="/static/testimage/{% print(viddata[videoTime]['filename']) %}" style="height:350px; width:500px;  border-radius: 5%;">
+    <iframe id="cartoonVideo" width="640" height="385" src="{% print(viddata[videoTime]['videoEmbed']) %}" frameborder="0" allowfullscreen></iframe>
+    <p>{{ viddata[videoTime]["videoPara"] }}</p>
+    <p>{{ viddata[videoTime]["videoQuote"] }}</p>
+  </div>
+</body>
+{% endblock %}
