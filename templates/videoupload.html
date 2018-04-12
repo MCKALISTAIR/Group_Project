@@ -4,22 +4,18 @@
 <body>
 
 <div class="container">
-<h3>Upload a Story!</h3>
+<h3>Upload a Video!</h3>
 <form method=post enctype=multipart/form-data>
   <fieldset>
     <form class = "form-inline">
-      <input type = "text" class = "form-control" placeholder = "Story Title" name = "Title">
+      <input type = "text" class = "form-control" placeholder = "Story Title" name = "videoTitle">
       <p></p>
-      <textarea  type ="text" class ="form-control" placeholder ="Paragragh One" name ="StoryPara" rows = "3"></textarea>
+      <input type = "text" class = "form-control" placeholder = "Embed Link" name = "videoEmbed">
       <p></p>
-      <textarea type ="text" class ="form-control" placeholder ="Paragragh Two" name ="StoryParaTwo" rows = "3"></textarea>
-      <p></p>
-      <textarea type ="text" class ="form-control" placeholder ="Paragragh Three" name ="StoryParaThree" rows = "3"></textarea>
-      <p></p>
-      <textarea type ="text" class ="form-control" placeholder ="Paragragh Four" name ="StoryParaFour" rows = "3"></textarea>
+      <textarea type ="text" class ="form-control" placeholder ="Paragragh One" name ="videoPara" rows = "3"></textarea>
       <p></p>
       <p>School:</p>
-      <select class="form-control" name="schoolSelect">
+      <select class="form-control" name="videoSchoolSelect">
         <option>School of Computing</option>
         <option>School of Engineering and Built Environment</option>
         <option>School of Business</option>
@@ -28,9 +24,9 @@
         <option>School of Health and Social Care</option>
       </select>
       <p></p>
-      <input type="text" class="form-control" placeholder="Quote" name="Quote">
+      <input type="text" class="form-control" placeholder="Quote" name="videoQuote">
       <p></p>
-      <input type=file name=zipFolder multiple>
+      <input type=file name=filename>
       <p></p>
       <input class="btn btn-default" type="Submit" value="Submit">
       <p></p>

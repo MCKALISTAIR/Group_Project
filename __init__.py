@@ -29,7 +29,7 @@ def storyTime(form, filename):
     storyTime["ParaThree"] = form["StoryParaThree"]
     storyTime["ParaFour"] = form["StoryParaFour"]
     storyTime["Quote"] = form["Quote"]
-    storyTime["filename"] = form["filename"]
+    storyTime["filename"] = filename
     return storyTime
 
 with open('newstories.json') as in_file:
@@ -50,7 +50,7 @@ mail = Mail(app)
 #app.config['MAIL_DEFAULT_SENDER'] = ‘allymckay5@gmail.com’
 @app.route("/", methods=['POST','GET'])
 def main():
-    return render_template('main.html')
+    return render_template('main.html', data=data)
 @app.route("/test")
 def phptest():
     return render_template('test.html')

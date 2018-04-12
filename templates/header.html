@@ -12,9 +12,8 @@
 
 
   <title>Napier Placement Stories</title>
-  <link rel="shortcut icon" type="image/x-icon" href="static/favicon.ico" />
-  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-  <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
   <script src="static/js/bootstrap.bundle.min.js"></script>
@@ -38,12 +37,20 @@
 <!-- Creates the banner!-->
 <header>
   <a href="/">
-    <h1>Enhanced Placement Stories</h1>
+    <img src="/static/images/headerPlaceHolder.png">
   </a>
 </header>
 
 {% if session.get('status', None) == "admin": %}
-    <h3>Logged in as Admin</h3>
+<div class="row">
+  <div class=col>
+  </div>
+  <div class=col>
+    <h4 style="text-align:center; background-color:#D94E42; background-border:solid;">Admin Logged In</h4>
+  </div>
+  <div class=col>
+  </div>
+</div>
 {% endif %}
 
 {% if session.get('status', None) == "User": %}
@@ -101,7 +108,6 @@
     </div>
   </div>
 </div>
-
 <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModal2Label" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -112,17 +118,18 @@
         </button>
       </div>
       <div class="modal-body">
-        <p>Enter email below to request access</p>
         <form action="{% print url_for('Send') %}" class ="form-inline" method="post">
           <input type = "email" class = "form-control" placeholder="Email" name = "email">
           <input class ="btn btn-default" type = "submit" value = Send>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal modal2">Close</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           </form>
       </div>
     </div>
   </div>
 </div>
-
+<a href="/morestories">
+  <img src="static/images/insta.png" class="img-responsive fa-pull-right" width="10%" height="10%">
+</a>
 <!--This creates the footer !-->
 <footer class="footer" style="background-color:lightgrey;">
   <div class="navbar navbar-default navbar-fixed-bottom">
