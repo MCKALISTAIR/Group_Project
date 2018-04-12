@@ -47,6 +47,15 @@
   </div>
   {% endfor %}
 </div>
+<div class="row">
+  {% for vid in viddata %}
+  <div class="col" style="margin-right:2.5%; margin-left:2.5%;">
+    <a href="/{% print(viddata[vid]['videoTitle']) %}/">
+      <img src="/static/testimage/{% print(viddata[vid]['filename']) %}" style="width:250px; height:250px;">
+    </a>
+  </div>
+  {% endfor %}
+</div>
   <a href="/morestories">
     <img src="static/engBanner.png" class="img-responsive rounded" width="100%" height="45%">
   </a>

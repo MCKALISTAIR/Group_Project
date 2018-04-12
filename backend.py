@@ -2,6 +2,7 @@
 import json
 from flask import Flask, flash, session, render_template, url_for, request, session, redirect, abort
 import os
+from werkzeug.utils import secure_filename
 # from flask.ext.uploads import UploadSet, configure_uploads, IMAGES
 # from flask_mail import Mail, Message
 #from flask_pymongo import PyMongo
@@ -34,9 +35,23 @@ def storyTime(form, zipFolder):
     storyTime["zipFolder"] = zipFolder
     return storyTime
 
+def videoTime(form, filename):
+    videoTime = {}
+    videoTime["videoTitle"] = form["videoTitle"]
+    videoTime["videoEmbed"] = form["videoEmbed"]
+    videoTime["videoPara"] = form["videoPara"]
+    videoTime["videoSchoolSelect"] = form["videoSchoolSelect"]
+    videoTime["videoQuote"] = form["videoQuote"]
+    videoTime["filename"] = filename
+    return videoTime
+
 with open('newstories.json') as in_file:
     data = json.load(in_file)
     in_file.close()
+
+with open('videoStories.json') as vidin_file:
+    viddata = json.load(vidin_file)
+    vidin_file.close()
 
 # app.config.update(
 # 	#EMAIL SETTINGS
@@ -50,7 +65,7 @@ with open('newstories.json') as in_file:
 #app.config['MAIL_DEFAULT_SENDER'] = ‘allymckay5@gmail.com’
 @app.route("/", methods=['POST','GET'])
 def main():
-    return render_template('main.html', data=data)
+    return render_template('main.html', data=data, viddata=viddata)
 # @app.route("/test")
 # def phptest():
 #     return render_template('test.html')
@@ -69,7 +84,7 @@ def main():
 # 		except Exception, e:
 # 			return(str(e))
 
-@app.route("/textupload", methods=['POST','GET'])
+@app.route("/textupload/", methods=['POST','GET'])
 def text():
     if request.method == "POST" and "zipFolder" in request.files:
         f = request.files.getlist('zipFolder')
@@ -84,73 +99,88 @@ def text():
         return render_template("main.html", data=data, zipFile=zipFile)
     return render_template("textupload.html", data=data)
 
+@app.route("/videoupload/", methods=['POST','GET'])
+def videoUpload():
+    if request.method == "POST" and "filename" in request.files:
+        file = request.files['filename']
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+    if request.method == "POST" and "videoTitle" in request.form:
+        viddata[request.form["videoTitle"]] = videoTime(request.form, filename)
+        with open('videoStories.json', 'w') as outfile:
+            json.dump(viddata, outfile)
+        flash("Your Video Has Been Posted!")
+        return render_template("main.html", viddata=viddata, filename=filename)
+    return render_template("videoupload.html", viddata=viddata)
+
 def upload():
     if request.method == 'POST' and 'photo' in request.files:
         filename = photos.save(request.files['photo'])
         return filename
     return render_template('upload.html')
 
-@app.route("/admin", methods=['POST','GET'])
+@app.route("/admin/", methods=['POST','GET'])
 def admin():
     if session.get('status', None) != "admin":
         abort(403)
     else:
         return render_template('admin.html')
 
-@app.route("/analyticstestpage", methods=['POST','GET'])
+@app.route("/analyticstestpage/", methods=['POST','GET'])
 def analyticstestpage():
     if session.get('status', None) != "admin":
         abort(403)
     else:
         return render_template('analyticstestpage.html')
 
-@app.route("/analyticstestpage2", methods=['POST','GET'])
+@app.route("/analyticstestpage2/", methods=['POST','GET'])
 def analyticstestpage2():
     if session.get('status', None) != "admin":
         abort(403)
     else:
         return render_template('analyticstestpage2.html')
 
-@app.route("/analyticstestpage3", methods=['POST','GET'])
+@app.route("/analyticstestpage3/", methods=['POST','GET'])
 def analyticstestpage3():
     if session.get('status', None) != "admin":
         abort(403)
     else:
         return render_template('analyticstestpage3.html')
 
-@app.route("/uploadinstructions", methods=['POST','GET'])
+@app.route("/uploadinstructions/", methods=['POST','GET'])
 def uploadinstructions():
     if session.get('status', None) != "admin":
         abort(403)
     else:
         return render_template('uploadinstructions.html')
 
-@app.route("/morestories", methods=['POST','GET'])
+@app.route("/morestories/", methods=['POST','GET'])
 def morestories():
     return render_template('morestories.html')
 
-@app.route("/carouselchange", methods=['POST','GET'])
+@app.route("/carouselchange/", methods=['POST','GET'])
 def carouselchange():
     if session.get('status', None) != "admin":
         abort(403)
     else:
         return render_template('carouselchange.html')
 
-@app.route("/videoinstructions", methods=['POST','GET'])
+@app.route("/videoinstructions/", methods=['POST','GET'])
 def videoinstructions():
     if session.get('status', None) != "admin":
         abort(403)
     else:
         return render_template('videoinstructions.html')
 
-@app.route('/logout')
+@app.route('/logout/')
 def logout():
     session['user'] = ""
     session['status'] = ""
     flash('You have been logged out')
     return redirect(url_for('main'))
 
-@app.route("/login", methods=['POST','GET'])
+@app.route("/login/", methods=['POST','GET'])
 def login():
     # Check that the user supplied details in the POST
     if request.method == 'POST':
@@ -171,9 +201,13 @@ def login():
     else:
         return render_template('admin.html')
 
-@app.route("/<storyTime>/", methods=['POST','GET'])
-def story(storyTime):
+@app.route("/story/<storyTime>/", methods=['POST','GET'])
+def storyTime(storyTime):
     return render_template('storytemp.html', data=data, storyTime=storyTime)
+
+@app.route("/video/<videoTime>/", methods=['POST','GET'])
+def videoTime(videoTime):
+    return render_template('videotemp.html', viddata=viddata, videoTime=videoTime)
 
 @app.errorhandler(403)
 def page_not_found(error4):
