@@ -6,7 +6,7 @@ from werkzeug.utils import secure_filename
 # from flask.ext.uploads import UploadSet, configure_uploads, IMAGES
 # from flask_mail import Mail, Message
 #from flask_pymongo import PyMongo
-# import bcrypt
+import bcrypt
 app = Flask(__name__)
 # photos = UploadSet('photos', IMAGES)
 
