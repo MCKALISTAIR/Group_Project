@@ -47,7 +47,7 @@
   <div class=col>
   </div>
   <div class=col>
-    <h4 style="text-align:center; background-color:#a2fba2; background-border:solid;">Admin Logged In</h4>
+    <h4 style="text-align:center; background-color:#D94E42; background-border:solid;">Admin Logged In</h4>
   </div>
   <div class=col>
   </div>
@@ -109,8 +109,28 @@
     </div>
   </div>
 </div>
-
-
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModal2Label" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModal2Label">Access request form</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="{% print url_for('Send') %}" class ="form-inline" method="post">
+          <input type = "email" class = "form-control" placeholder="Email" name = "email">
+          <input class ="btn btn-default" type = "submit" value = Send>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
+<a href="/morestories">
+  <img src="static/images/insta.png" class="img-responsive fa-pull-right" width="10%" height="10%">
+</a>
 <!--This creates the footer !-->
 <footer class="footer" style="background-color:lightgrey;">
   <div class="navbar navbar-default navbar-fixed-bottom">
