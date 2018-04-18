@@ -13,22 +13,22 @@
     <div class="carousel-item active">
       <a href="https://www.napier.ac.uk/about-us/our-location/our-campuses/merchiston" title=""><img class="d-block w-100" src="static/images/merch.jpg" alt="First slide"></a>
       <div class="carousel-caption d-none d-md-block">
-        <h5>Merchiston</h5>
-        <p>Computing,Photography,Engineering</p>
+      <h5 style="font-family:trial; font-weight: bold">Merchiston</h5>
+        <p style="font-family:trial; font-weight: bold">Computing,Photography,Engineering</p>
       </div>
     </div>
     <div class="carousel-item">
       <a href="https://www.napier.ac.uk/about-us/our-location/our-campuses/sighthill" title=""><img class="d-block w-100" src="static/images/sight.jpg" alt="Second slide"></a>
       <div class="carousel-caption d-none d-md-block">
-        <h5>Sighthill</h5>
-        <p>Sports,Nursing</p>
+        <h5 style="font-family:trial; font-weight: bold">Sighthill</h5>
+        <p style="font-family:trial; font-weight: bold">Sports,Nursing</p>
       </div>
     </div>
     <div class="carousel-item">
         <a href="https://www.napier.ac.uk/about-us/our-location/our-campuses/craiglockhart" title=""><img class="d-block w-100" src="static/images/craig.jpg" alt="Third slide"></a>
       <div class="carousel-caption d-none d-md-block">
-        <h5>Craiglochhart</h5>
-        <p>Business</p>
+        <h5 style="font-family:trial; font-weight: bold">Craiglochhart</h5>
+        <p style="font-family:trial; font-weight: bold">Business</p>
       </div>
     </div>
   </div>
@@ -37,7 +37,7 @@
 <a href="/morestories">
   <img src="static/b6.png" class="img-responsive rounded" width="100%" height="45%">
 </a>
-<h3>Top Stories From The School of Computing</h3>
+<h3 style="font-family:trial; font-weight: bold">Top Stories From The School of Computing</h3>
 <div class="row">
   {% for d in data %}
   <div class="col" style="margin-right:2.5%; margin-left:2.5%;">
@@ -47,20 +47,10 @@
   </div>
   {% endfor %}
 </div>
-<div class="row">
-  {% for vid in viddata %}
-  <div class="col" style="margin-right:2.5%; margin-left:2.5%;">
-    <a href="/{% print(viddata[vid]['videoTitle']) %}/">
-      <img src="/static/testimage/{% print(viddata[vid]['filename']) %}" style="width:250px; height:250px;">
-    </a>
-  </div>
-  {% endfor %}
-</div>
   <a href="/morestories">
     <img src="static/engBanner.png" class="img-responsive rounded" width="100%" height="45%">
   </a>
-  <h3>Top Stories From The School of Engineering & The Built Envionment</h3>
-
+  <h3 style="font-family:trial; font-weight: bold">Top Stories From The School of Engineering & The Built Envionment</h3>
 <script type="text/javascript" id="cookieinfo"
 	src="//cookieinfoscript.com/js/cookieinfo.min.js">
 </script>
