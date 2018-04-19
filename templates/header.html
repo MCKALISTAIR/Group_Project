@@ -45,7 +45,7 @@ font-weight:bold; }
 <!-- Creates the banner!-->
 <header>
   <a href="/">
-    <img src="/static/images/headerPlaceHolder.png">
+    <img class="img-fluid" src="/static/images/headerPlaceHolder.png">
   </a>
 </header>
 
@@ -139,31 +139,33 @@ font-weight:bold; }
   <img src="static/images/insta.png" class="img-responsive fa-pull-right" width="10%" height="10%">
 </a>
 <!--This creates the footer !-->
-<footer class="footer" style="background-color:lightgrey;">
-  <div class="navbar navbar-default navbar-fixed-bottom">
+<div class="footer" style="background-color:lightgrey; padding-top:1%; margin-top:1%;">
+  <!-- <div class="navbar navbar-default navbar-fixed-bottom"> -->
     <div class="container">
-      <!-- Footer text!-->
-      <!-- this line will centre the text, but move the icons <div class="container text-center"> !-->
-      <div class="col-md-6">
-      <a href="https://www.napier.ac.uk" class="text-muted">© 2018 - Edinburgh Napier University</a>
+      <div class="row">
+        <div class="col-sm" style="text-align:center;">
+          <a href="https://www.napier.ac.uk" class="text-muted">© 2018 - Edinburgh Napier University</a>
+        </div>
+        <div class="col-sm" style="text-align:center;">
+          <p class="text-muted">
+          <a class="text-muted" href="/">Home</a>
+            //
+          <a class="text-muted"href="/about">About</a>
+        </p>
+        </div>
+        <div class="col-sm" style="text-align:center;">
+          {% if session.get('status', None) != "admin": %}
+            <button type="button" class="btn btn-secondary" style="margin-top:-1.8%; text-align:center;" data-toggle="modal" data-target="#exampleModal">Admin Login</button>
+          {% endif %}
+          {% if session.get('status', None) == "admin": %}
+            <a href="/logout" class ="btn btn-secondary"  style="margin-top:-1.8%;">Logout</a>
+            <a href="/admin"><i class="fas fa-id-card" style="margin-bottom:1%;" title="Return to the admin homepage"></i></a>
+          {% endif %}
+        </div>
+      </div>
     </div>
-      <!-- Creates the login modal !-->
-      <!--  <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">Admin Login</button> !-->
-      <div class="col-md-sm social-badge">
-      {% if session.get('status', None) != "admin": %}
-            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">Admin Login</button>
-      {% endif %}
-      {% if session.get('status', None) == "admin": %}
-          <a href="/logout" class ="btn btn-secondary">Logout</a>
-          <a href="/admin"><i class="fas fa-id-card" title="Return to the admin homepage"></i></a>
-      {% endif %}
-        <a href="https://www.instagram.com/edinburghnapierplacements/?hl=en"><i class="fab fa-instagram" title="View our instagram"></i></a>
-        <a href="/"><i class="fas fa-home fa-fw" title="Return to the homepage"></i></a>
-    </div>
-    <!--  <li><a href="/logout">Logout <span class="sr-only">(current)</span></a></li>!-->
-    </div>
-  </div>
-</footer>
+  <!-- </div> -->
+</div>
 
 
 

@@ -2,17 +2,20 @@
 
 {% block body %}
 <body>
-  {% if session.get('status', None) == "admin": %}
-  <button type="button" class="btn float-right btn-secondary">Enter edit mode</button>
-  {% endif %}
   <div class="container">
     <h1 style="text-align:center;">{{ data[storyTime]["Title"] }}</h1>
-    <img src="/static/testimage/{% print(data[storyTime]['zipFolder']) %}" style="height:350px; width:500px;  border-radius: 5%;">
+    <p></p>
+    <h3 style="text-align:center;"> {{ data[storyTime]["schoolSelect"] }}</h3>
+    <img src="/static/testimage/{% print(data[storyTime]['filename']) %}">
     <p>{{ data[storyTime]["ParaOne"] }}</p>
     <p>{{ data[storyTime]["ParaTwo"] }}</p>
     <p>{{ data[storyTime]["ParaThree"] }}</p>
     <p>{{ data[storyTime]["ParaFour"] }}</p>
-    <p>"{{ data[storyTime]["Quote"] }}"</p>
+    <p>{{ data[storyTime]["Quote"] }}</p>
+
+    {% if session.get('status', None) == "admin": %}
+    <button type="button" class="btn btn-danger" style="margin-left:85%;">Delete This Story?</button>
+    {% endif %}
   </div>
 </body>
 {% endblock %}
