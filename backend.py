@@ -23,8 +23,8 @@ def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-def storyTime(form, zipFolder):
-    storyTime= {}
+def storyTimeMap(form, filename):
+    storyTime = {}
     storyTime["Title"] = form["Title"]
     storyTime["ParaOne"] = form["StoryPara"]
     storyTime["ParaTwo"] = form["StoryParaTwo"]
@@ -32,26 +32,26 @@ def storyTime(form, zipFolder):
     storyTime["ParaFour"] = form["StoryParaFour"]
     storyTime["Quote"] = form["Quote"]
     storyTime["schoolSelect"] = form["schoolSelect"]
-    storyTime["zipFolder"] = zipFolder
+    storyTime["filename"] = filename
     return storyTime
 
-def videoTime(form, filename):
-    videoTime = {}
-    videoTime["videoTitle"] = form["videoTitle"]
-    videoTime["videoEmbed"] = form["videoEmbed"]
-    videoTime["videoPara"] = form["videoPara"]
-    videoTime["videoSchoolSelect"] = form["videoSchoolSelect"]
-    videoTime["videoQuote"] = form["videoQuote"]
-    videoTime["filename"] = filename
-    return videoTime
+# def videoTime(form, filename):
+#     videoTime = {}
+#     videoTime["videoTitle"] = form["videoTitle"]
+#     videoTime["videoEmbed"] = form["videoEmbed"]
+#     videoTime["videoPara"] = form["videoPara"]
+#     videoTime["videoSchoolSelect"] = form["videoSchoolSelect"]
+#     videoTime["videoQuote"] = form["videoQuote"]
+#     videoTime["filename"] = filename
+#     return videoTime
 
 with open('newstories.json') as in_file:
     data = json.load(in_file)
     in_file.close()
 
-with open('videoStories.json') as vidin_file:
-    viddata = json.load(vidin_file)
-    vidin_file.close()
+# with open('videoStories.json') as vidin_file:
+#     viddata = json.load(vidin_file)
+#     vidin_file.close()
 
 # app.config.update(
 # 	#EMAIL SETTINGS
@@ -63,9 +63,15 @@ with open('videoStories.json') as vidin_file:
 # 	)
 # mail = Mail(app)
 #app.config['MAIL_DEFAULT_SENDER'] = ‘allymckay5@gmail.com’
+
 @app.route("/", methods=['POST','GET'])
 def main():
-    return render_template('main.html', data=data, viddata=viddata)
+    return render_template('main.html', data=data)
+
+@app.route("/about")
+def about():
+    return render_template('about.html')
+
 # @app.route("/test")
 # def phptest():
 #     return render_template('test.html')
@@ -84,41 +90,41 @@ def main():
 # 		except Exception, e:
 # 			return(str(e))
 
-@app.route("/textupload/", methods=['POST','GET'])
+@app.route("/textupload/", methods=['GET','POST'])
 def text():
-    if request.method == "POST" and "zipFolder" in request.files:
-        f = request.files.getlist('zipFolder')
-        for zipFile in f:
-            filename = zipFile.filename.split('/')[0]
-            zipFile.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-    if request.method == "POST" and "Title" in request.form:
-        data[request.form["Title"]] = storyTime(request.form, filename)
-        with open('newstories.json', 'w') as outfile:
-            json.dump(data, outfile)
-        flash("Your Story Has Been Posted!")
-        return render_template("main.html", data=data, zipFile=zipFile)
-    return render_template("textupload.html", data=data)
-
-@app.route("/videoupload/", methods=['POST','GET'])
-def videoUpload():
     if request.method == "POST" and "filename" in request.files:
         file = request.files['filename']
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-    if request.method == "POST" and "videoTitle" in request.form:
-        viddata[request.form["videoTitle"]] = videoTime(request.form, filename)
-        with open('videoStories.json', 'w') as outfile:
-            json.dump(viddata, outfile)
-        flash("Your Video Has Been Posted!")
-        return render_template("main.html", viddata=viddata, filename=filename)
-    return render_template("videoupload.html", viddata=viddata)
+    if request.method == "POST" and "Title" in request.form:
+        data[request.form["Title"]] = storyTimeMap(request.form, filename)
+        with open('newstories.json', 'w') as outfile:
+            json.dump(data, outfile)
+        flash("Your Story Has Been Posted!")
+        return render_template("main.html", data=data, filename=filename)
+    return render_template("textupload.html", data=data)
 
-def upload():
-    if request.method == 'POST' and 'photo' in request.files:
-        filename = photos.save(request.files['photo'])
-        return filename
-    return render_template('upload.html')
+# @app.route("/videoupload/", methods=['GET','POST'])
+# def videoUpload():
+#     if request.method == "POST" and "filename" in request.files:
+#         file = request.files['filename']
+#         if file and allowed_file(file.filename):
+#             filename = secure_filename(file.filename)
+#             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+#     if request.method == "POST" and "videoTitle" in request.form:
+#         viddata[request.form["videoTitle"]] = videoTime(request.form, filename)
+#         with open('videoStories.json', 'w') as outfile:
+#             json.dump(viddata, outfile)
+#         flash("Your Video Has Been Posted!")
+#         return render_template("main.html", viddata=viddata, filename=filename)
+#     return render_template("videoupload.html", viddata=viddata)
+
+# def upload():
+#     if request.method == 'POST' and 'photo' in request.files:
+#         filename = photos.save(request.files['photo'])
+#         return filename
+#     return render_template('upload.html')
 
 @app.route("/admin/", methods=['POST','GET'])
 def admin():
@@ -126,20 +132,6 @@ def admin():
         abort(403)
     else:
         return render_template('admin.html')
-
-@app.route("/analyticstestpage/", methods=['POST','GET'])
-def analyticstestpage():
-    if session.get('status', None) != "admin":
-        abort(403)
-    else:
-        return render_template('analyticstestpage.html')
-
-@app.route("/analyticstestpage2/", methods=['POST','GET'])
-def analyticstestpage2():
-    if session.get('status', None) != "admin":
-        abort(403)
-    else:
-        return render_template('analyticstestpage2.html')
 
 @app.route("/analyticstestpage3/", methods=['POST','GET'])
 def analyticstestpage3():
@@ -204,10 +196,10 @@ def login():
 @app.route("/story/<storyTime>/", methods=['POST','GET'])
 def storyTime(storyTime):
     return render_template('storytemp.html', data=data, storyTime=storyTime)
-
-@app.route("/video/<videoTime>/", methods=['POST','GET'])
-def videoTime(videoTime):
-    return render_template('videotemp.html', viddata=viddata, videoTime=videoTime)
+#
+# @app.route("/video/<videoTime>/", methods=['POST','GET'])
+# def videoTime(videoTime):
+#     return render_template('videotemp.html', viddata=viddata, videoTime=videoTime)
 
 @app.errorhandler(403)
 def page_not_found(error4):
