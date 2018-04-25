@@ -1,12 +1,6 @@
 <html>
-<style type="text/css">
-@font-face {
-font-family: trial;
-src: url_for('static/fonts/Titillium/Titillium-Bold.otf') ;
-font-weight:bold; }
-
-</style>
 <head>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115870719-1"></script>
 <script>
@@ -30,6 +24,7 @@ font-weight:bold; }
   <link rel="stylesheet" href="/static/css/bootstrap.css">
   <link rel="stylesheet" href="/static/css/bootstrap.min.css">
   <script src="static/js/bootstrap.js"></script>
+  <link type="text/css" rel="stylesheet" href="{{url_for('static/css', filename='bootstrap.css')}}"/>
 
   <!-- Carousel -->
   <!-- <script language="JavaScript" type="text/javascript">
@@ -39,7 +34,7 @@ font-weight:bold; }
       })
     });
   </script> -->
-  <link href="static/fonts/Titillium/Titillium-Regular.otf" rel="hgfds">
+  <!--<link href="static/fonts/Titillium/Titillium-Regular.otf" rel="hgfds">-->
 </head>
 
 <!-- Creates the banner!-->
